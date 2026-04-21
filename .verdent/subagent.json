@@ -1,0 +1,69 @@
+{
+  "subagents": [
+    {
+      "id": "8f015dddca5edf0f",
+      "name": "general",
+      "isInner": true,
+      "disabled": false,
+      "description": "A versatile agent designed for researching complex problems, searching code, and executing multi-step tasks.",
+      "prompt": "",
+      "tools": []
+    },
+    {
+      "id": "bbb607d2ba57d79f",
+      "name": "Verifier",
+      "isInner": true,
+      "disabled": false,
+      "description": "Built-in subagent that provides quick code checks. Simply @ it during your coding tasks.",
+      "prompt": "",
+      "model": "claude-sonnet-4-6",
+      "tools": []
+    },
+    {
+      "id": "fd403c2192ab8e73",
+      "name": "fast-context",
+      "isInner": true,
+      "disabled": false,
+      "description": "Optimized for quickly pinpointing code locations and gathering contextual evidence, specialized for codebase indexing.",
+      "prompt": "",
+      "model": "gemini-3-flash-preview",
+      "tools": []
+    },
+    {
+      "id": "93215b7f20263423",
+      "name": "Verdent-helper",
+      "isInner": true,
+      "disabled": false,
+      "description": "Your Verdent assistant for documentation and usage guidance. @Verdent-helper it when you have questions about Verdent features.",
+      "prompt": "",
+      "model": "claude-haiku-4-5@20251001",
+      "tools": []
+    },
+    {
+      "id": "a6f978b9e8258c77",
+      "name": "Reviewer",
+      "isInner": true,
+      "disabled": false,
+      "description": "Reviewer finds errors, edge cases, and risks in your code, with suggested fixes.",
+      "prompt": "",
+      "multi_models": [
+        "gemini-3.1-pro-preview",
+        "claude-opus-4-6"
+      ],
+      "tools": []
+    },
+    {
+      "id": "bafc3dcda3f31f1d",
+      "name": "Multi-model-planner",
+      "isInner": true,
+      "disabled": false,
+      "description": "Orchestrates the configured planning models to collaborate, cross-validate, and deliver stronger planning strategies.",
+      "prompt": "",
+      "multi_models": [
+        "claude-opus-4-6",
+        "gemini-3.1-pro-preview"
+      ],
+      "tools": []
+    }
+  ]
+}

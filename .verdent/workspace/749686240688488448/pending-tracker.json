@@ -1,0 +1,12 @@
+{
+  "items": [
+    {
+      "id": "pending-001",
+      "title": "Odoo 19 Türkiye Sanal POS Ödeme Sistemi",
+      "description": "Tam kapsamlı sanal POS modülü: banka gateway entegrasyonları, kategori bazlı taksit, ürün sayfasında taksit tablosu, ödeme sayfasında kart tanıma + taksit seçimi, admin paneli, 3D Secure, geri dönüşler",
+      "status": "in_progress",
+      "created": "2026-04-21",
+      "projectId": 1
+    }
+  ]
+}

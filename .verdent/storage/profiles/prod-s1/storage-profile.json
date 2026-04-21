@@ -1,0 +1,5 @@
+{
+  "storageProfile": "prod-s1",
+  "storageChannel": "prod",
+  "storageSchemaLineage": "s1"
+}

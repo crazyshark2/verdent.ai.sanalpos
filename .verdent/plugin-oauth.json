@@ -1,0 +1,14 @@
+{
+  "github": {
+    "clientId": "Iv23liNZ1aLOJhE4Ar9c",
+    "clientSecret": "a68a4287c4bd0740192cf644c81d96372ddb7c59"
+  },
+  "figma": {
+    "clientId": "qb62pJPeLzNZ96RXeIGoyl",
+    "clientSecret": "1LAtB6dpnRSVmY5Vu7lZpK1juwhOoL"
+  },
+  "vercel": {
+    "clientId": "cl_xOho5m3gS0ZKkFguP5hYHXPvlvliAPuh",
+    "clientSecret": "22c53f98368583a9b2a6436f3f28b38febbf0d28da86f1148422457a7aa8c03f"
+  }
+}

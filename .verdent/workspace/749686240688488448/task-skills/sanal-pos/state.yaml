@@ -1,0 +1,24 @@
+current_step: step-1
+status: in_progress
+steps:
+  step-1:
+    status: in_progress
+    result: ""
+  step-2:
+    status: pending
+    result: ""
+  step-3:
+    status: pending
+    result: ""
+  step-4:
+    status: pending
+    result: ""
+  step-5:
+    status: pending
+    result: ""
+  step-6:
+    status: pending
+    result: ""
+  step-7:
+    status: pending
+    result: ""

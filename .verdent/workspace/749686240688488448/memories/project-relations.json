@@ -1,0 +1,20 @@
+{
+  "1": {
+    "projects": [
+      "snake-game",
+      "snake-game_副本",
+      "snake-game_副本2"
+    ],
+    "type": "clone-variants",
+    "primary": "snake-game",
+    "note": "副本用于对比测试和不同版本实验，需同步主项目功能"
+  },
+  "2": {
+    "projects": [
+      "agent-deck",
+      "verdent-deck"
+    ],
+    "type": "frontend-backend",
+    "note": "verdent-deck 是 Electron 前端，agent-deck 是 Python 后端，Unix Socket IPC 通信"
+  }
+}

@@ -1,0 +1,1000 @@
+{
+  "version": "model-catalog-1776755289173",
+  "issuedAt": 1776755289173,
+  "data": {
+    "model_config": [
+      {
+        "key": "gpt-5.4",
+        "label": "GPT-5.4",
+        "icon": "openai",
+        "description": "GPT-5.4 is a flagship model for professional work, integrating reasoning, coding, and agentic workflows to complete complex tasks more efficiently across tools and office software environments.",
+        "contextWindow": "272K",
+        "costMultiplier": 0.61,
+        "tagline": "Efficient frontier model for professional work. May be slow due to provider resource limits",
+        "creditsDescription": "About 230 model requests/100 credits",
+        "enabled": true,
+        "supportsReasoningEffort": true,
+        "supportsImages": true,
+        "reasoningLevels": [
+          {
+            "level": 2,
+            "label": "Low"
+          },
+          {
+            "level": 3,
+            "label": "Medium"
+          },
+          {
+            "level": 4,
+            "label": "High"
+          },
+          {
+            "level": 5,
+            "label": "Extra high"
+          }
+        ],
+        "model_name": "gpt-5.4",
+        "provider": [
+          "azure"
+        ],
+        "context_window_tokens": 400000,
+        "max_input_tokens": 272000,
+        "default_max_output_tokens": 32000,
+        "supports_tools_streaming": true,
+        "supports_thinking": true,
+        "display_name": "GPT-5.4",
+        "prompt_variant": "gpt"
+      },
+      {
+        "key": "gpt-5.3-codex",
+        "label": "GPT-5.3-Codex",
+        "icon": "openai",
+        "description": "GPT-5.3-Codex combines top-tier coding with advanced reasoning, runs 25% faster, and evolves into an agent that handles complex, long-running tasks with real-time guidance.",
+        "contextWindow": "272K",
+        "costMultiplier": 0.61,
+        "tagline": "Optimized for agentic coding tasks",
+        "creditsDescription": "About 230 model requests/100 credits",
+        "enabled": true,
+        "supportsReasoningEffort": true,
+        "supportsImages": true,
+        "reasoningLevels": [
+          {
+            "level": 2,
+            "label": "Low"
+          },
+          {
+            "level": 3,
+            "label": "Medium"
+          },
+          {
+            "level": 4,
+            "label": "High"
+          },
+          {
+            "level": 5,
+            "label": "Extra high"
+          }
+        ],
+        "model_name": "gpt-5.3-codex",
+        "provider": [
+          "openai"
+        ],
+        "context_window_tokens": 400000,
+        "max_input_tokens": 272000,
+        "default_max_output_tokens": 32000,
+        "supports_tools_streaming": true,
+        "supports_thinking": true,
+        "display_name": "GPT-5.3 Codex",
+        "prompt_variant": "gpt-codex"
+      },
+      {
+        "key": "claude-sonnet-4-6",
+        "label": "Sonnet 4.6",
+        "icon": "claude",
+        "description": "Claude Sonnet 4.6 is the most capable Sonnet model. It's a full upgrade across coding, computer use, long-context reasoning, agent planning, knowledge work, and design.",
+        "contextWindow": "200K",
+        "costMultiplier": 1,
+        "tagline": "Balanced for complex tasks and cost",
+        "creditsDescription": "About 140 model requests/100 credits",
+        "enabled": true,
+        "supportsReasoningEffort": true,
+        "supportsImages": true,
+        "reasoningLevels": [
+          {
+            "level": 1,
+            "label": "Low"
+          },
+          {
+            "level": 2,
+            "label": "Medium"
+          },
+          {
+            "level": 3,
+            "label": "High"
+          },
+          {
+            "level": 4,
+            "label": "Max"
+          }
+        ],
+        "model_name": "claude-sonnet-4-6",
+        "provider": [
+          "anthropic"
+        ],
+        "context_window_tokens": 200000,
+        "default_max_output_tokens": 32000,
+        "supports_tools_streaming": true,
+        "supports_thinking": true,
+        "display_name": "Sonnet 4.6",
+        "beta_features": [
+          "interleaved-thinking-2025-05-14",
+          "context-management-2025-06-27"
+        ]
+      },
+      {
+        "key": "claude-opus-4-7",
+        "label": "Opus 4.7",
+        "icon": "claude",
+        "description": "Opus 4.7 is built for long-running, asynchronous agents, delivering stronger multi-step task reliability and improved coding, knowledge work, and agentic execution.",
+        "contextWindow": "200K",
+        "costMultiplier": 1.67,
+        "tagline": "Stronger multi-step reasoning, reliable long-running agents",
+        "creditsDescription": "About 84 model requests/100 credits",
+        "enabled": true,
+        "supportsReasoningEffort": true,
+        "supportsImages": true,
+        "reasoningLevels": [
+          {
+            "level": 1,
+            "label": "Low"
+          },
+          {
+            "level": 2,
+            "label": "Medium"
+          },
+          {
+            "level": 3,
+            "label": "High"
+          },
+          {
+            "level": 4,
+            "label": "Extra High"
+          },
+          {
+            "level": 5,
+            "label": "Max"
+          }
+        ],
+        "model_name": "claude-opus-4-7",
+        "provider": [
+          "anthropic"
+        ],
+        "context_window_tokens": 200000,
+        "default_max_output_tokens": 32000,
+        "supports_tools_streaming": true,
+        "supports_thinking": true,
+        "display_name": "Opus 4.7",
+        "beta_features": [
+          "context-management-2025-06-27"
+        ]
+      },
+      {
+        "key": "claude-opus-4-6",
+        "label": "Opus 4.6",
+        "icon": "claude",
+        "description": "Opus 4.6 is a powerful AI model optimized for complex reasoning, coding, and long-running agent workflows, delivering reliable performance on multi-step tasks.",
+        "contextWindow": "200K",
+        "costMultiplier": 1.67,
+        "tagline": "Strong coding, agent workflows, stable multi-step reasoning",
+        "creditsDescription": "About 84 model requests/100 credits",
+        "enabled": true,
+        "supportsReasoningEffort": true,
+        "supportsImages": true,
+        "reasoningLevels": [
+          {
+            "level": 1,
+            "label": "Low"
+          },
+          {
+            "level": 2,
+            "label": "Medium"
+          },
+          {
+            "level": 3,
+            "label": "High"
+          },
+          {
+            "level": 4,
+            "label": "Max"
+          }
+        ],
+        "model_name": "claude-opus-4-6",
+        "provider": [
+          "anthropic"
+        ],
+        "context_window_tokens": 200000,
+        "default_max_output_tokens": 32000,
+        "supports_tools_streaming": true,
+        "supports_thinking": true,
+        "display_name": "Opus 4.6",
+        "beta_features": [
+          "interleaved-thinking-2025-05-14",
+          "context-management-2025-06-27"
+        ]
+      },
+      {
+        "key": "gemini-3.1-pro-preview",
+        "label": "Gemini 3.1 Pro",
+        "icon": "gemini",
+        "description": "Gemini 3.1 Pro is the most advanced reasoning model in the Gemini family, built to solve complex problems. It can understand large datasets and multimodal inputs — including text, audio, images, video, PDFs, and even full code repositories.",
+        "contextWindow": "200K",
+        "costMultiplier": 0.65,
+        "tagline": "Capable of solving complex problems",
+        "creditsDescription": "About 217 model requests/100 credits",
+        "enabled": true,
+        "supportsReasoningEffort": true,
+        "supportsImages": true,
+        "reasoningLevels": [
+          {
+            "level": 2,
+            "label": "Low"
+          },
+          {
+            "level": 3,
+            "label": "Medium"
+          },
+          {
+            "level": 4,
+            "label": "High"
+          }
+        ],
+        "model_name": "gemini-3.1-pro-preview",
+        "provider": [
+          "google"
+        ],
+        "context_window_tokens": 200000,
+        "max_input_tokens": 134464,
+        "default_max_output_tokens": 65536,
+        "supports_tools_streaming": true,
+        "supports_thinking": true,
+        "display_name": "Gemini 3.1 Pro",
+        "prompt_variant": "gemini"
+      },
+      {
+        "key": "gemini-3-flash-preview",
+        "label": "Gemini 3 Flash",
+        "icon": "gemini",
+        "description": "Get Gemini 3 Pro's level of reasoning with Flash-level latency and efficiency – at a fraction of the cost.",
+        "contextWindow": "200K",
+        "costMultiplier": 0.16,
+        "tagline": "Flash-level latency and efficiency (Beta)",
+        "creditsDescription": "About 864 model requests/100 credits",
+        "enabled": true,
+        "supportsReasoningEffort": true,
+        "supportsImages": true,
+        "reasoningLevels": [
+          {
+            "level": 2,
+            "label": "Low"
+          },
+          {
+            "level": 4,
+            "label": "High"
+          }
+        ],
+        "model_name": "gemini-3-flash-preview",
+        "provider": [
+          "google"
+        ],
+        "context_window_tokens": 1000000,
+        "max_input_tokens": 934464,
+        "default_max_output_tokens": 65536,
+        "supports_tools_streaming": true,
+        "supports_thinking": true,
+        "display_name": "Gemini 3.0 Flash Preview",
+        "prompt_variant": "gemini"
+      },
+      {
+        "key": "claude-sonnet-4-6-1m",
+        "label": "Sonnet 4.6 1M",
+        "icon": "claude",
+        "description": "Claude Sonnet 4.6 is the most capable Sonnet model yet, delivering upgraded performance across coding, reasoning, planning, and design, with a 1M-token context window in beta.",
+        "contextWindow": "1M",
+        "costMultiplier": 1,
+        "tagline": "Balanced for complex tasks and cost",
+        "creditsDescription": "About 140 model requests/100 credits",
+        "enabled": true,
+        "supportsReasoningEffort": true,
+        "supportsImages": true,
+        "reasoningLevels": [
+          {
+            "level": 1,
+            "label": "Low"
+          },
+          {
+            "level": 2,
+            "label": "Medium"
+          },
+          {
+            "level": 3,
+            "label": "High"
+          },
+          {
+            "level": 4,
+            "label": "Max"
+          }
+        ],
+        "model_name": "claude-sonnet-4-6",
+        "provider": [
+          "anthropic"
+        ],
+        "context_window_tokens": 1000000,
+        "default_max_output_tokens": 32000,
+        "supports_tools_streaming": true,
+        "supports_thinking": true,
+        "display_name": "Sonnet 4.6 1M",
+        "beta_features": [
+          "interleaved-thinking-2025-05-14",
+          "context-management-2025-06-27"
+        ],
+        "context_management_policy": {
+          "edits": [
+            {
+              "type": "clear_tool_uses_20250919",
+              "trigger": {
+                "type": "input_tokens",
+                "value": 680000
+              },
+              "keep": {
+                "type": "tool_uses",
+                "value": 5
+              },
+              "clear_at_least": {
+                "type": "input_tokens",
+                "value": 200000
+              }
+            }
+          ]
+        }
+      },
+      {
+        "key": "claude-opus-4-7-1m",
+        "label": "Opus 4.7 1M",
+        "icon": "claude",
+        "description": "Opus 4.7 is built for long-running, asynchronous agents, delivering stronger multi-step task reliability and improved coding, knowledge work, and agentic execution, with a 1M-token context window.",
+        "contextWindow": "1M",
+        "costMultiplier": 1.67,
+        "tagline": "Stronger multi-step reasoning with 1M context support",
+        "creditsDescription": "About 84 model requests/100 credits",
+        "enabled": true,
+        "supportsReasoningEffort": true,
+        "supportsImages": true,
+        "reasoningLevels": [
+          {
+            "level": 1,
+            "label": "Low"
+          },
+          {
+            "level": 2,
+            "label": "Medium"
+          },
+          {
+            "level": 3,
+            "label": "High"
+          },
+          {
+            "level": 4,
+            "label": "Extra High"
+          },
+          {
+            "level": 5,
+            "label": "Max"
+          }
+        ],
+        "model_name": "claude-opus-4-7",
+        "provider": [
+          "anthropic"
+        ],
+        "context_window_tokens": 1000000,
+        "default_max_output_tokens": 32000,
+        "supports_tools_streaming": true,
+        "supports_thinking": true,
+        "display_name": "Opus 4.7 1M",
+        "beta_features": [
+          "context-management-2025-06-27"
+        ]
+      },
+      {
+        "key": "claude-opus-4-6-1m",
+        "label": "Opus 4.6 1M",
+        "icon": "claude",
+        "description": "Opus 4.6 is a powerful AI model optimized for complex reasoning, coding, and long-running agent workflows, delivering reliable performance on multi-step tasks, with a 1M-token context window.",
+        "contextWindow": "1M",
+        "costMultiplier": 1.67,
+        "tagline": "Strong coding and agent workflows with 1M context support",
+        "creditsDescription": "About 84 model requests/100 credits",
+        "enabled": true,
+        "supportsReasoningEffort": true,
+        "supportsImages": true,
+        "reasoningLevels": [
+          {
+            "level": 1,
+            "label": "Low"
+          },
+          {
+            "level": 2,
+            "label": "Medium"
+          },
+          {
+            "level": 3,
+            "label": "High"
+          },
+          {
+            "level": 4,
+            "label": "Max"
+          }
+        ],
+        "model_name": "claude-opus-4-6",
+        "provider": [
+          "anthropic"
+        ],
+        "context_window_tokens": 1000000,
+        "default_max_output_tokens": 32000,
+        "supports_tools_streaming": true,
+        "supports_thinking": true,
+        "display_name": "Opus 4.6 1M",
+        "beta_features": [
+          "interleaved-thinking-2025-05-14",
+          "context-management-2025-06-27"
+        ]
+      },
+      {
+        "key": "claude-haiku-4-5@20251001",
+        "label": "Haiku 4.5",
+        "icon": "claude",
+        "description": "Anthropic's fastest model with extended thinking support. One-third the cost of Sonnet 4 with comparable coding performance.",
+        "contextWindow": "200K",
+        "costMultiplier": 0.33,
+        "tagline": "Fast and efficient for simple tasks",
+        "creditsDescription": "About 420 model requests/100 credits",
+        "enabled": true,
+        "supportsReasoningEffort": true,
+        "supportsImages": true,
+        "reasoningLevels": [
+          {
+            "level": 0,
+            "label": "Think Off"
+          },
+          {
+            "level": 1,
+            "label": "Think On"
+          },
+          {
+            "level": 2,
+            "label": "Think Hard"
+          },
+          {
+            "level": 4,
+            "label": "Ultrathink"
+          }
+        ],
+        "model_name": "claude-haiku-4-5@20251001",
+        "provider": [
+          "anthropic"
+        ],
+        "context_window_tokens": 200000,
+        "default_max_output_tokens": 32000,
+        "supports_tools_streaming": true,
+        "supports_thinking": true,
+        "display_name": "Haiku 4.5",
+        "beta_features": [
+          "interleaved-thinking-2025-05-14",
+          "context-management-2025-06-27"
+        ]
+      },
+      {
+        "key": "MiniMax-M2.7",
+        "label": "MiniMax M2.7",
+        "icon": "minimax",
+        "description": "M2.7 delivers robust agentic instruction-following, multi-skill orchestration, and strong engineering plus office automation capabilities for complex, multi-step workflows.",
+        "contextWindow": "200K",
+        "costMultiplier": 0.1,
+        "tagline": "Reliable multi-skill agent workflows",
+        "creditsDescription": "About 1443 model requests/100 credits",
+        "enabled": true,
+        "supportsReasoningEffort": true,
+        "supportsImages": false,
+        "autoReasoningEffort": true,
+        "reasoningLevels": [
+          {
+            "level": 1,
+            "label": "Think On"
+          }
+        ],
+        "model_name": "MiniMax-M2.7",
+        "provider": [
+          "minimax"
+        ],
+        "context_window_tokens": 204800,
+        "default_max_output_tokens": 32000,
+        "supports_tools_streaming": true,
+        "supports_thinking": true,
+        "display_name": "MiniMax M2.7"
+      },
+      {
+        "key": "glm-5.1",
+        "label": "GLM-5.1",
+        "icon": "zai",
+        "description": "GLM-5.1 is designed for long-horizon engineering work, excelling at sustained execution, iterative optimization, and autonomous delivery across complex development workflows.",
+        "contextWindow": "200K",
+        "costMultiplier": 0.55,
+        "tagline": "System-level agentic coding for long-running and precise execution",
+        "creditsDescription": "About 254 model requests/100 credits",
+        "enabled": true,
+        "supportsReasoningEffort": true,
+        "supportsImages": false,
+        "reasoningLevels": [
+          {
+            "level": 0,
+            "label": "Think Off"
+          },
+          {
+            "level": 4,
+            "label": "Think On"
+          }
+        ],
+        "model_name": "glm-5.1",
+        "provider": [
+          "z.ai"
+        ],
+        "context_window_tokens": 200000,
+        "default_max_output_tokens": 32000,
+        "supports_tools_streaming": true,
+        "supports_thinking": true,
+        "display_name": "glm 5.1"
+      },
+      {
+        "key": "kimi-k2.6",
+        "label": "Kimi K2.6",
+        "icon": "kimi",
+        "description": "Kimi K2.6 shows strong improvements in long-horizon coding tasks, with reliable generalization across programming languages and tasks.",
+        "contextWindow": "262K",
+        "costMultiplier": 0.37,
+        "tagline": "Handles long coding tasks well across languages.",
+        "creditsDescription": "About 387 model requests/100 credits",
+        "enabled": true,
+        "supportsReasoningEffort": true,
+        "supportsImages": true,
+        "reasoningLevels": [
+          {
+            "level": 0,
+            "label": "Think Off"
+          },
+          {
+            "level": 4,
+            "label": "Think On"
+          }
+        ],
+        "model_name": "kimi-k2.6",
+        "provider": [
+          "moonshotai"
+        ],
+        "context_window_tokens": 262144,
+        "default_max_output_tokens": 32000,
+        "supports_tools_streaming": true,
+        "supports_thinking": true,
+        "display_name": "Kimi K2.6"
+      },
+      {
+        "key": "kimi-k2.5",
+        "label": "Kimi K2.5",
+        "icon": "kimi",
+        "description": "Kimi K2.5 extends K2 with continued pretraining on ~15T mixed text and visual tokens. As a native multimodal model, it delivers state-of-the-art coding, vision, and agent-swarm intelligence.",
+        "contextWindow": "262K",
+        "costMultiplier": 0.24,
+        "tagline": "A native multimodal model with agent swarm intelligence",
+        "creditsDescription": "About 596 model requests/100 credits",
+        "enabled": true,
+        "supportsReasoningEffort": true,
+        "supportsImages": true,
+        "reasoningLevels": [
+          {
+            "level": 0,
+            "label": "Think Off"
+          },
+          {
+            "level": 4,
+            "label": "Think On"
+          }
+        ],
+        "model_name": "kimi-k2.5",
+        "provider": [
+          "moonshotai"
+        ],
+        "context_window_tokens": 262144,
+        "default_max_output_tokens": 32000,
+        "supports_tools_streaming": true,
+        "supports_thinking": true,
+        "display_name": "Kimi K2.5"
+      },
+      {
+        "key": "claude-opus-4-5@20251101",
+        "label": "Opus 4.5",
+        "icon": "claude",
+        "description": "Anthropic's top-tier model built for deep reasoning, complex problem-solving, and high-quality multilingual generation.",
+        "contextWindow": "200K",
+        "costMultiplier": 1.67,
+        "tagline": "Great for deep coding tasks and problem-solving",
+        "creditsDescription": "About 140 model requests/100 credits",
+        "enabled": false,
+        "supportsReasoningEffort": true,
+        "supportsImages": true,
+        "reasoningLevels": [
+          {
+            "level": 0,
+            "label": "Think Off"
+          },
+          {
+            "level": 1,
+            "label": "Think On"
+          },
+          {
+            "level": 2,
+            "label": "Think Hard"
+          },
+          {
+            "level": 4,
+            "label": "Ultrathink"
+          }
+        ],
+        "model_name": "claude-opus-4-5@20251101",
+        "provider": [
+          "anthropic"
+        ],
+        "context_window_tokens": 200000,
+        "default_max_output_tokens": 32000,
+        "supports_tools_streaming": true,
+        "supports_thinking": true,
+        "display_name": "Opus 4.5",
+        "beta_features": [
+          "interleaved-thinking-2025-05-14",
+          "context-management-2025-06-27"
+        ]
+      },
+      {
+        "key": "claude-sonnet-4-5@20250929",
+        "label": "Sonnet 4.5",
+        "icon": "claude",
+        "description": "Anthropic's compact, high-performance model built for fast, capable reasoning and multilingual tasks.",
+        "contextWindow": "200K",
+        "costMultiplier": 1,
+        "tagline": "Balanced for complex tasks and cost",
+        "creditsDescription": "About 140 model requests/100 credits",
+        "enabled": false,
+        "supportsReasoningEffort": true,
+        "supportsImages": true,
+        "reasoningLevels": [
+          {
+            "level": 0,
+            "label": "Think Off"
+          },
+          {
+            "level": 1,
+            "label": "Think On"
+          },
+          {
+            "level": 2,
+            "label": "Think Hard"
+          },
+          {
+            "level": 4,
+            "label": "Ultrathink"
+          }
+        ],
+        "model_name": "claude-sonnet-4-5@20250929",
+        "provider": [
+          "anthropic"
+        ],
+        "context_window_tokens": 200000,
+        "default_max_output_tokens": 32000,
+        "supports_tools_streaming": true,
+        "supports_thinking": true,
+        "display_name": "Sonnet 4.5",
+        "beta_features": [
+          "interleaved-thinking-2025-05-14",
+          "context-management-2025-06-27"
+        ]
+      },
+      {
+        "key": "gpt-5.2",
+        "label": "GPT-5.2",
+        "icon": "openai",
+        "description": "GPT 5.2 is the smartest GPT-5 model, excelling in general intelligence, multimodal tasks, code/UI generation, tool use, and spreadsheet handling.",
+        "contextWindow": "272K",
+        "costMultiplier": 0.61,
+        "tagline": "Excels in AI, code, multimodal tasks. May be slow due to provider resource limits (Beta)",
+        "creditsDescription": "About 230 model requests/100 credits",
+        "enabled": false,
+        "supportsReasoningEffort": true,
+        "supportsImages": true,
+        "reasoningLevels": [
+          {
+            "level": 2,
+            "label": "Low"
+          },
+          {
+            "level": 3,
+            "label": "Medium"
+          },
+          {
+            "level": 4,
+            "label": "High"
+          },
+          {
+            "level": 5,
+            "label": "Extra high"
+          }
+        ],
+        "model_name": "gpt-5.2",
+        "provider": [
+          "openai"
+        ],
+        "context_window_tokens": 400000,
+        "max_input_tokens": 272000,
+        "default_max_output_tokens": 32000,
+        "supports_tools_streaming": true,
+        "supports_thinking": true,
+        "display_name": "GPT-5.2",
+        "prompt_variant": "gpt"
+      },
+      {
+        "key": "gpt-5.1",
+        "label": "GPT-5.1",
+        "icon": "openai",
+        "description": "An upgraded version of GPT-5 that balances frontier-level intelligence with high speed across agentic and coding tasks.",
+        "contextWindow": "272K",
+        "costMultiplier": 0.44,
+        "tagline": "Stronger Coding Capabilities. May be slow due to provider resource limits (Beta)",
+        "creditsDescription": "About 320 model requests/100 credits",
+        "enabled": false,
+        "supportsReasoningEffort": true,
+        "supportsImages": true,
+        "reasoningLevels": [
+          {
+            "level": 0,
+            "label": "None"
+          },
+          {
+            "level": 3,
+            "label": "Medium"
+          },
+          {
+            "level": 4,
+            "label": "High"
+          }
+        ],
+        "model_name": "gpt-5.1",
+        "provider": [
+          "openai"
+        ],
+        "context_window_tokens": 400000,
+        "max_input_tokens": 272000,
+        "default_max_output_tokens": 32000,
+        "supports_tools_streaming": true,
+        "supports_thinking": true,
+        "display_name": "GPT-5.1",
+        "prompt_variant": "gpt"
+      },
+      {
+        "key": "gpt-5.2-codex",
+        "label": "GPT-5.2-Codex",
+        "icon": "openai",
+        "description": "GPT 5.2 Codex is a next-gen coding agent on Codex for complex, long-running tasks, offering faster, token-efficient performance.",
+        "contextWindow": "272K",
+        "costMultiplier": 0.61,
+        "tagline": "Fast and token-efficient for complex, long-running tasks. May be slow due to provider resource limits (Beta)",
+        "creditsDescription": "About 230 model requests/100 credits",
+        "enabled": false,
+        "supportsReasoningEffort": true,
+        "supportsImages": true,
+        "reasoningLevels": [
+          {
+            "level": 2,
+            "label": "Low"
+          },
+          {
+            "level": 3,
+            "label": "Medium"
+          },
+          {
+            "level": 4,
+            "label": "High"
+          },
+          {
+            "level": 5,
+            "label": "Extra high"
+          }
+        ],
+        "model_name": "gpt-5.2-codex",
+        "provider": [
+          "openai"
+        ],
+        "context_window_tokens": 400000,
+        "max_input_tokens": 272000,
+        "default_max_output_tokens": 32000,
+        "supports_tools_streaming": true,
+        "supports_thinking": true,
+        "display_name": "GPT-5.2 Codex",
+        "prompt_variant": "gpt-codex"
+      },
+      {
+        "key": "gpt-5-codex",
+        "label": "GPT-5-Codex",
+        "icon": "openai",
+        "description": "OpenAI's code-focused GPT-5 variant optimized for programming and debugging.",
+        "contextWindow": "272K",
+        "costMultiplier": 0.44,
+        "tagline": "Suitable for coding and debugging. May be slow due to provider resource limits (Beta)",
+        "creditsDescription": "About 320 model requests/100 credits",
+        "enabled": false,
+        "supportsReasoningEffort": true,
+        "supportsImages": true,
+        "reasoningLevels": [
+          {
+            "level": 2,
+            "label": "Low"
+          },
+          {
+            "level": 3,
+            "label": "Medium"
+          },
+          {
+            "level": 4,
+            "label": "High"
+          }
+        ],
+        "model_name": "gpt-5-codex",
+        "provider": [
+          "openai"
+        ],
+        "context_window_tokens": 400000,
+        "max_input_tokens": 272000,
+        "default_max_output_tokens": 32000,
+        "supports_tools_streaming": true,
+        "supports_thinking": true,
+        "display_name": "GPT-5 Codex",
+        "prompt_variant": "gpt-codex"
+      }
+    ],
+    "manager_model_config": [
+      {
+        "key": "claude-opus-4-7",
+        "label": "Opus 4.7",
+        "icon": "claude",
+        "description": "Opus 4.7 is built for long-running, asynchronous agents, delivering stronger multi-step task reliability and improved coding, knowledge work, and agentic execution.",
+        "contextWindow": "200K",
+        "costMultiplier": 1.67,
+        "tagline": "Stronger multi-step reasoning, reliable long-running agents",
+        "creditsDescription": "About 84 model requests/100 credits",
+        "enabled": true,
+        "supportsReasoningEffort": true,
+        "supportsImages": true,
+        "reasoningLevels": [
+          {
+            "level": 1,
+            "label": "Low"
+          },
+          {
+            "level": 2,
+            "label": "Medium"
+          },
+          {
+            "level": 3,
+            "label": "High"
+          },
+          {
+            "level": 4,
+            "label": "Extra High"
+          },
+          {
+            "level": 5,
+            "label": "Max"
+          }
+        ],
+        "model_name": "claude-opus-4-7",
+        "provider": [
+          "anthropic"
+        ],
+        "context_window_tokens": 200000,
+        "default_max_output_tokens": 32000,
+        "supports_tools_streaming": true,
+        "supports_thinking": true,
+        "display_name": "Opus 4.7",
+        "beta_features": [
+          "context-management-2025-06-27"
+        ]
+      },
+      {
+        "key": "claude-opus-4-6",
+        "label": "Opus 4.6",
+        "icon": "claude",
+        "description": "Opus 4.6 is a powerful AI model optimized for complex reasoning, coding, and long-running agent workflows, delivering reliable performance on multi-step tasks.",
+        "contextWindow": "200K",
+        "costMultiplier": 1.67,
+        "tagline": "Strong coding, agent workflows, stable multi-step reasoning",
+        "creditsDescription": "About 84 model requests/100 credits",
+        "enabled": true,
+        "supportsReasoningEffort": true,
+        "supportsImages": true,
+        "reasoningLevels": [
+          {
+            "level": 1,
+            "label": "Low"
+          },
+          {
+            "level": 2,
+            "label": "Medium"
+          },
+          {
+            "level": 3,
+            "label": "High"
+          },
+          {
+            "level": 4,
+            "label": "Max"
+          }
+        ],
+        "model_name": "claude-opus-4-6",
+        "provider": [
+          "anthropic"
+        ],
+        "context_window_tokens": 200000,
+        "default_max_output_tokens": 32000,
+        "supports_tools_streaming": true,
+        "supports_thinking": true,
+        "display_name": "Opus 4.6",
+        "beta_features": [
+          "interleaved-thinking-2025-05-14",
+          "context-management-2025-06-27"
+        ]
+      }
+    ],
+    "model_solution": [
+      {
+        "solution_name": "Performance",
+        "desc": "Frontier models: 1–2× the credit usage of Balance",
+        "model": {
+          "Plan": [
+            "Opus 4.6 1M",
+            "GPT-5.4",
+            "Gemini 3.1 Pro"
+          ],
+          "Agent": "Opus 4.6 1M",
+          "sub_agent": {
+            "code-reviewer": "gpt-5.4",
+            "explorer": "claude-4.6-sonnet",
+            "general": "claude-opus-4-6",
+            "verifier": "gpt-5.4"
+          }
+        }
+      },
+      {
+        "solution_name": "Balance",
+        "desc": "An optimal blend of performance and cost: 1× credit usage",
+        "is_default": true,
+        "model": {
+          "Plan": [
+            "claude-4.6-sonnet"
+          ],
+          "Agent": "Sonnet 4.6",
+          "sub_agent": {
+            "code-reviewer": "gpt-5.4",
+            "explorer": "gemini-3-flash",
+            "general": "claude-4.6-sonnet",
+            "verifier": "gpt-5.4"
+          }
+        }
+      }
+    ]
+  }
+}
