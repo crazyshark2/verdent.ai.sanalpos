@@ -1,0 +1,29 @@
+# Odoo 19 Payment Transaction Model Fields
+
+Based on the GitHub source code for `payment_transaction.py`, here are the key fields you queried:
+
+## Core Fields
+
+| Field | Type | Description |
+|-------|------|-------------|
+| **reference** | Char | The internal reference of the transaction (readonly, required, unique) |
+| **amount** | Monetary | The transaction amount (readonly, required) |
+| **currency_id** | Many2one | Reference to `res.currency` (readonly, required) |
+| **state** | Selection | Transaction status with options: `draft`, `pending`, `authorized`, `done`, `cancel`, `error` (readonly, required, indexed) |
+| **provider_id** | Many2one | Reference to `payment.provider` (readonly, required) |
+
+## Additional Related Fields
+
+- **provider_code**: Selection field (related to `provider_id.code`)
+- **provider_reference**: Char field for the provider's transaction reference
+- **company_id**: Many2one to `res.company` (indexed, related to `provider_id.company_id`)
+- **payment_method_id**: Many2one to `payment.method` (readonly, required)
+- **state_message**: Text field for complementary status information
+- **last_state_change**: Datetime field tracking when state last changed
+
+## Key Constraints
+
+- **Unique Constraint**: `reference` field must be unique across all transactions
+- **State Validation**: Transactions in `authorized` state require the provider to support manual capture
+
+All core fields mentioned in your query are marked as **readonly** and **required**, indicating they are set during transaction creation and cannot be modified afterward.

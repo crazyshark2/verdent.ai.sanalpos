@@ -1,0 +1,15 @@
+{
+  "records": [
+    {
+      "filename": "C:\\Users\\omerk\\odoo19-sanal-pos\\payment_sanal_pos\\gateways\\exceptions.py",
+      "start_line": 1,
+      "end_line": 35,
+      "content_hash": "95a6d65e0efbb085",
+      "timestamp": "2026-04-21T09:35:39.743671",
+      "session_id": "7f2d7a9a-f852-41cb-953d-bd51c19132df",
+      "group_id": "a5ed53cf-0378-43d7-ac57-9c8a1625db11",
+      "content_snippet": "class GatewayError(Exception):\n    \"\"\"Gateway temel hata s\u0131n\u0131f\u0131.\"\"\"\n\n\nclass HashMismatchError(GatewayError):\n    \"\"\"Hash do\u011frulamas\u0131 ba\u015far\u0131s\u0131z.\"\"\"\n\n\nclass ConnectionError(GatewayError):\n    \"\"\"Banka ileti\u015fim hatas\u0131.\"\"\"\n\n\nclass TimeoutError(GatewayError):\n    \"\"\"Banka yan\u0131t zaman a\u015f\u0131m\u0131.\"\"\"\n\n\nclass AuthenticationError(GatewayError):\n    \"\"\"Kimlik do\u011frulama hatas\u0131.\"\"\"\n\n\nclass UnsupportedTransactionError(GatewayError):\n    \"\"\"Desteklenmeyen i\u015flem tipi.\"\"\"\n\n\nclass InvalidResponseError(GatewayError):\n    \"\"\"Ge\u00e7ersiz banka yan\u0131t\u0131.\"\"\"\n\n\nclass RefundError(GatewayError):\n    \"\"\"\u0130ade i\u015flemi hatas\u0131.\"\"\"\n\n\nclass CancelError(GatewayError):\n    \"\"\"\u0130ptal i\u015flemi hatas\u0131.\"\"\"\n"
+    }
+  ],
+  "source_file": "C:\\Users\\omerk\\odoo19-sanal-pos\\payment_sanal_pos\\gateways\\exceptions.py"
+}

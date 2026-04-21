@@ -1,0 +1,15 @@
+{
+  "records": [
+    {
+      "filename": "C:\\Users\\omerk\\odoo19-sanal-pos\\payment_sanal_pos\\gateways\\__init__.py",
+      "start_line": 1,
+      "end_line": 27,
+      "content_hash": "c751c52d045a73ea",
+      "timestamp": "2026-04-21T09:30:56.774256",
+      "session_id": "7f2d7a9a-f852-41cb-953d-bd51c19132df",
+      "group_id": "a5ed53cf-0378-43d7-ac57-9c8a1625db11",
+      "content_snippet": "from .base_gateway import BaseGateway\nfrom .garanti_gateway import GarantiGateway\nfrom .estv3_gateway import EstV3Gateway\nfrom .payflex_gateway import PayFlexGateway\nfrom .posnet_gateway import PosNetGateway\n\nGATEWAY_REGISTRY = {\n    'garanti': GarantiGateway,\n    'estv3': EstV3Gateway,\n    'payflex': PayFlexGateway,\n    'posnet': PosNetGateway,\n}\n\n\ndef get_gateway(provider):\n    \"\"\"Provider'a g\u00f6re do\u011fru gateway instance olu\u015fturur.\n\n    :param provider: payment.provider recordset\n    :returns: BaseGateway subclass instance\n    :raises ValueError: Desteklenmeyen gateway tipi\n    \"\"\"\n    gateway_type = provider.sanal_pos_gateway_type\n    gateway_cls = GATEWAY_REGISTRY.get(gateway_type)\n    if not gateway_cls:\n        raise ValueError(f\"Desteklenmeyen gateway tipi: {gateway_type}\")\n    return gateway_cls(provider)\n"
+    }
+  ],
+  "source_file": "C:\\Users\\omerk\\odoo19-sanal-pos\\payment_sanal_pos\\gateways\\__init__.py"
+}

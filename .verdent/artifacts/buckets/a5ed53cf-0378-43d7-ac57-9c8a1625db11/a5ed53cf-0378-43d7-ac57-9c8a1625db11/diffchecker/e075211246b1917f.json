@@ -1,0 +1,15 @@
+{
+  "records": [
+    {
+      "filename": "C:\\Users\\omerk\\odoo19-sanal-pos\\payment_sanal_pos\\controllers\\__init__.py",
+      "start_line": 1,
+      "end_line": 3,
+      "content_hash": "a8703012f8e7224f",
+      "timestamp": "2026-04-21T09:30:56.765754",
+      "session_id": "7f2d7a9a-f852-41cb-953d-bd51c19132df",
+      "group_id": "a5ed53cf-0378-43d7-ac57-9c8a1625db11",
+      "content_snippet": "from . import main\nfrom . import installment_api\n"
+    }
+  ],
+  "source_file": "C:\\Users\\omerk\\odoo19-sanal-pos\\payment_sanal_pos\\controllers\\__init__.py"
+}

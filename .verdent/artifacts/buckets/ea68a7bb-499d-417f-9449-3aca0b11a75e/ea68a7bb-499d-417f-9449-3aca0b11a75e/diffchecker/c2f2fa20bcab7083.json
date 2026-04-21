@@ -1,0 +1,15 @@
+{
+  "records": [
+    {
+      "filename": "C:\\Users\\omerk\\.verdent\\workspace\\749686240688488448\\task-skills\\sanal-pos\\SKILL.md",
+      "start_line": 1,
+      "end_line": 60,
+      "content_hash": "6f5a25ccb37a345e",
+      "timestamp": "2026-04-21T09:30:06.492650",
+      "session_id": "e4c046b6-244c-439e-9af8-9ac770b588cb",
+      "group_id": "ea68a7bb-499d-417f-9449-3aca0b11a75e",
+      "content_snippet": "# Odoo 19 T\u00fcrkiye Sanal POS \u00d6deme Sistemi\n\n## Goal\nTam kapsaml\u0131 Odoo 19 sanal POS mod\u00fcl\u00fc geli\u015ftirmek.\n\n## Steps\n\n### step-1: Temel Altyap\u0131 (Faz 1)\n- Mod\u00fcl iskeleti: __manifest__.py, __init__.py, security, models, gateways/base_gateway.py\n- BIN veritaban\u0131 modeli + CSV data + post_init_hook\n- Men\u00fc ve temel view XML'leri\n> ACCEPT: Mod\u00fcl dosya yap\u0131s\u0131 olu\u015fturulmu\u015f, t\u00fcm model dosyalar\u0131 mevcut, __manifest__.py do\u011fru\n> VERIFY[dispatch]: Dosya yap\u0131s\u0131 ve Python syntax kontrol\u00fc\n\n### step-2: Garanti Gateway (Faz 2)\n- GarantiGateway tam implementasyonu\n- payment.provider + payment.transaction extend\n- 3D Secure controller + callback\n- Transaction log sistemi\n> GATE: step-1\n> ACCEPT: Garanti gateway kodu yaz\u0131lm\u0131\u015f, 3D ak\u0131\u015f\u0131 controller mevcut\n> VERIFY[dispatch]: Kod review + syntax check\n\n### step-3: Di\u011fer Gateway'ler (Faz 3)\n- EstV3Gateway (Akbank, \u0130\u015fbank, Ziraat, Halkbank, TEB)\n- PayFlexGateway (Vak\u0131fbank)\n- PosNetGateway (Yap\u0131Kredi)\n> GATE: step-2\n> ACCEPT: 3 gateway tam kodlanm\u0131\u015f, provider data XML'leri mevcut\n\n### step-4: Taksit Sistemi (Faz 4)\n- Taksit modelleri + kategori bazl\u0131 oranlar\n- Taksit API endpoint'leri\n- Taksit y\u00f6netim view'lar\u0131\n- Varsay\u0131lan taksit oranlar\u0131 data XML\n> GATE: step-3\n> ACCEPT: Taksit API \u00e7al\u0131\u015f\u0131r, kategori bazl\u0131 oran override mant\u0131\u011f\u0131 mevcut\n\n### step-5: OWL Frontend (Faz 5)\n- \u00dcr\u00fcn sayfas\u0131 taksit tablosu widget\n- Checkout \u00f6deme formu + BIN tan\u0131ma + taksit se\u00e7ici\n- QWeb template'leri + SCSS\n> GATE: step-4\n> ACCEPT: Frontend JS/XML dosyalar\u0131 mevcut, widget \u00fcr\u00fcn sayfas\u0131na entegre\n\n### step-6: \u0130ade/\u0130ptal (Faz 6)\n- RefundWizard + CancelWizard\n- \u0130ade/iptal controller endpoint'leri\n- Transaction g\u00fcncelleme\n> GATE: step-5\n> ACCEPT: Wizard'lar \u00e7al\u0131\u015f\u0131r, iade/iptal gateway metodlar\u0131 ba\u011fl\u0131\n\n### step-7: Test + Son Kontrol (Faz 7)\n- Unit test dosyalar\u0131\n- Hata y\u00f6netimi iyile\u015ftirmeleri\n- Son entegrasyon kontrol\u00fc\n> GATE: step-6\n> ACCEPT: Test dosyalar\u0131 mevcut, mod\u00fcl b\u00fct\u00fcnl\u00fc\u011f\u00fc do\u011frulanm\u0131\u015f\n> REPORT: Proje tamamland\u0131\n"
+    }
+  ],
+  "source_file": "C:\\Users\\omerk\\.verdent\\workspace\\749686240688488448\\task-skills\\sanal-pos\\SKILL.md"
+}

@@ -1,0 +1,54 @@
+# AbstractGateway Class Methods Analysis
+
+Based on the page content, here's a comprehensive overview of the **AbstractGateway class** methods organized by functionality:
+
+## 🔐 3D Secure Payment Methods
+
+| Method | Purpose | Parameters |
+|--------|---------|-----------|
+| **get3DFormData()** | Retrieves 3D form data from bank | `$order`, `$paymentModel`, `$txType`, `$creditCard`, `$createWithoutCard` |
+| **make3DPayment()** | Processes 3D payment | `$request`, `$order`, `$txType`, `$creditCard` |
+| **make3DPayPayment()** | Handles 3D_PAY payment response | `$request`, `$order`, `$txType` |
+| **make3DHostPayment()** | Handles host payment response | `$request`, `$order`, `$txType` |
+
+## 💳 Regular Payment Methods
+
+| Method | Purpose | Parameters |
+|--------|---------|-----------|
+| **makeRegularPayment()** | Standard payment processing | `$order`, `$creditCard`, `$txType` |
+| **makeRegularPostPayment()** | Pre-authorization closure (Ön Provizyon kapama) | `$order` |
+| **payment()** | Universal payment method for all models | `$paymentModel`, `$order`, `$txType`, `$creditCard` |
+
+## 🔄 Transaction Management Methods
+
+| Method | Purpose | Parameters |
+|--------|---------|-----------|
+| **refund()** | Refund an order | `$order` |
+| **cancel()** | Cancel an order | `$order` |
+| **status()** | Query order status | `$order` |
+| **orderHistory()** | Retrieve order history | `$order` |
+| **history()** | Get transaction history | `$data` |
+
+## 🛠️ Utility Methods
+
+| Method | Purpose |
+|--------|---------|
+| **customQuery()** | Execute custom API requests not covered by standard methods |
+| **isSuccess()** | Check if last transaction succeeded |
+| **getResponse()** | Retrieve latest response data |
+| **setTestMode()** | Enable/disable test mode (deprecated) |
+| **isTestMode()** | Check if test mode is active |
+| **getCardTypeMapping()** | Get supported card type mappings |
+| **getCurrencies()** | Get list of supported currencies |
+| **getAccount()** | Retrieve account information |
+| **isSupportedTransaction()** | Verify if transaction type/model is supported |
+
+## ⚠️ Common Exceptions
+
+- `UnsupportedTransactionTypeException`
+- `UnsupportedPaymentModelException`
+- `HashMismatchException`
+- `ClientExceptionInterface`
+- `RuntimeException`
+- `InvalidArgumentException`
+- `LogicException`

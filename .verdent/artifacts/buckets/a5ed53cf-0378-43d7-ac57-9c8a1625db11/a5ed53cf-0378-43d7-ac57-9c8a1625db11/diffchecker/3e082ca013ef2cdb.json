@@ -1,0 +1,15 @@
+{
+  "records": [
+    {
+      "filename": "C:\\Users\\omerk\\odoo19-sanal-pos\\payment_sanal_pos\\views\\menus.xml",
+      "start_line": 1,
+      "end_line": 61,
+      "content_hash": "e7f337dcd1652bed",
+      "timestamp": "2026-04-21T09:41:14.437580",
+      "session_id": "7f2d7a9a-f852-41cb-953d-bd51c19132df",
+      "group_id": "a5ed53cf-0378-43d7-ac57-9c8a1625db11",
+      "content_snippet": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<odoo>\n\n    <!-- Sanal POS Ana Men\u00fc -->\n    <menuitem\n        id=\"menu_sanal_pos_root\"\n        name=\"Sanal POS\"\n        parent=\"account.menu_finance_configuration\"\n        sequence=\"100\"/>\n\n    <menuitem\n        id=\"menu_sanal_pos_installment\"\n        name=\"Taksit Y\u00f6netimi\"\n        parent=\"menu_sanal_pos_root\"\n        sequence=\"10\"/>\n\n    <menuitem\n        id=\"menu_sanal_pos_bin\"\n        name=\"BIN Veritaban\u0131\"\n        parent=\"menu_sanal_pos_root\"\n        sequence=\"20\"/>\n\n    <menuitem\n        id=\"menu_sanal_pos_logs\"\n        name=\"\u0130\u015flem Loglar\u0131\"\n        parent=\"menu_sanal_pos_root\"\n        sequence=\"30\"/>\n\n    <!-- Taksit Y\u00f6netimi -->\n    <menuitem\n        id=\"menu_installment_list\"\n        name=\"Taksit Tan\u0131mlar\u0131\"\n        parent=\"menu_sanal_pos_installment\"\n        action=\"action_sanal_pos_installment\"\n        sequence=\"10\"/>\n\n    <menuitem\n        id=\"menu_category_rate_list\"\n        name=\"Kategori Bazl\u0131 Oranlar\"\n        parent=\"menu_sanal_pos_installment\"\n        action=\"action_sanal_pos_category_rate\"\n        sequence=\"20\"/>\n\n    <!-- BIN Veritaban\u0131 -->\n    <menuitem\n        id=\"menu_bin_list\"\n        name=\"BIN Listesi\"\n        parent=\"menu_sanal_pos_bin\"\n        action=\"action_sanal_pos_bin\"\n        sequence=\"10\"/>\n\n    <!-- \u0130\u015flem Loglar\u0131 -->\n    <menuitem\n        id=\"menu_transaction_log_list\"\n        name=\"T\u00fcm Loglar\"\n        parent=\"menu_sanal_pos_logs\"\n        action=\"action_sanal_pos_transaction_log\"\n        sequence=\"10\"/>\n\n</odoo>\n"
+    }
+  ],
+  "source_file": "C:\\Users\\omerk\\odoo19-sanal-pos\\payment_sanal_pos\\views\\menus.xml"
+}

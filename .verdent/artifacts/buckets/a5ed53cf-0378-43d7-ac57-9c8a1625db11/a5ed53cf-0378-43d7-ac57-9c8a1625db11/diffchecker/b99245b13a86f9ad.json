@@ -1,0 +1,15 @@
+{
+  "records": [
+    {
+      "filename": "C:\\Users\\omerk\\odoo19-sanal-pos\\payment_sanal_pos\\models\\sanal_pos_category_rate.py",
+      "start_line": 1,
+      "end_line": 35,
+      "content_hash": "843ccf3d6c919219",
+      "timestamp": "2026-04-21T09:33:26.095958",
+      "session_id": "7f2d7a9a-f852-41cb-953d-bd51c19132df",
+      "group_id": "a5ed53cf-0378-43d7-ac57-9c8a1625db11",
+      "content_snippet": "from odoo import fields, models\n\n\nclass SanalPosCategoryRate(models.Model):\n    _name = 'sanal.pos.category.rate'\n    _description = 'Kategori Bazl\u0131 Taksit Oran\u0131'\n\n    installment_id = fields.Many2one(\n        'sanal.pos.installment',\n        string=\"Taksit Tan\u0131m\u0131\",\n        required=True,\n        ondelete='cascade',\n    )\n    category_id = fields.Many2one(\n        'product.category',\n        string=\"\u00dcr\u00fcn Kategorisi\",\n        required=True,\n    )\n    interest_rate = fields.Float(\n        string=\"Kategori \u00d6zel Faiz Oran\u0131 (%)\",\n        digits=(5, 2),\n    )\n    is_active = fields.Boolean(\n        string=\"Aktif\",\n        default=True,\n    )\n\n    _sql_constraints = [\n        (\n            'unique_cat_rate',\n            'unique(installment_id, category_id)',\n            'Bir taksit tan\u0131m\u0131 i\u00e7in her kategoride yaln\u0131zca bir oran olabilir.',\n        ),\n    ]\n"
+    }
+  ],
+  "source_file": "C:\\Users\\omerk\\odoo19-sanal-pos\\payment_sanal_pos\\models\\sanal_pos_category_rate.py"
+}

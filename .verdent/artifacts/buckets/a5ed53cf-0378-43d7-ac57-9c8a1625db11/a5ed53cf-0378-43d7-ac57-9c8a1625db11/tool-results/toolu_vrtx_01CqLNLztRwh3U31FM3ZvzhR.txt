@@ -1,0 +1,46 @@
+# GitHub Repository Structure Analysis
+
+Based on the page content, here's the structure of the **mewebstudio/pos** repository's `src` directory:
+
+## Directory Structure
+
+```
+src/
+├── Client/
+├── Crypt/
+├── DataMapper/
+├── Entity/
+├── Event/
+├── Exceptions/
+├── Factory/
+├── Gateways/
+├── Serializer/
+└── PosInterface.php
+```
+
+## Key Components Relevant to Your Query
+
+### **Gateways Folder**
+- Located at: `src/Gateways/`
+- Last commit: "PayForPos: added more log details" (Feb 16, 2026)
+- Contains payment gateway implementations for various POS systems
+
+### **PosInterface.php**
+- Located at: `src/PosInterface.php`
+- Last commit: "fix issue #33 fix implicit nullable is deprecated warnings" (Dec 8, 2025)
+- Serves as the main interface for the POS system
+
+### **AbstractGateway Classes**
+While not explicitly shown in the file listing, the `Gateways` folder structure suggests it contains:
+- Abstract base classes for gateway implementations
+- Concrete gateway implementations for different payment processors
+- Related gateway logic and configurations
+
+## Related Directories
+- **Entity**: Data models for POS operations
+- **DataMapper**: Maps responses from gateways to entities
+- **Serializer**: Handles serialization of gateway requests/responses
+- **Factory**: Creates gateway instances
+- **Client**: HTTP client for gateway communication
+
+This architecture follows a **Gateway Pattern** with abstraction layers for extensibility across multiple payment processors.

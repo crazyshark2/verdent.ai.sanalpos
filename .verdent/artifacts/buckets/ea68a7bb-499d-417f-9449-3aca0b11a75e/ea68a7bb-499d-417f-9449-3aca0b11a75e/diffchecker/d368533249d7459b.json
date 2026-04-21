@@ -1,0 +1,15 @@
+{
+  "records": [
+    {
+      "filename": "C:\\Users\\omerk\\.verdent\\workspace\\749686240688488448\\MEMORY.md",
+      "start_line": 1,
+      "end_line": 22,
+      "content_hash": "8f191fa1fa516384",
+      "timestamp": "2026-04-21T09:22:15.638469",
+      "session_id": "eae44e16-2f58-4d02-95a6-fe2bf33aded6",
+      "group_id": "ea68a7bb-499d-417f-9449-3aca0b11a75e",
+      "content_snippet": "# Memory\n\n## User\n- Name: \u00d6mer (omerk)\n- Language: Turkish\n- Technical level: Non-developer (kod bilgisi yok, tam delege)\n- Platform: Windows 10\n\n## Active Projects\n- **Odoo 19 Sanal POS** (projectId: 2, path: C:\\Users\\omerk\\odoo19-sanal-pos)\n  - T\u00fcrkiye sanal POS \u00f6deme sistemi mod\u00fcl\u00fc\n  - Referans: https://github.com/mewebstudio/pos (PHP)\n  - Banka entegrasyonlar\u0131, taksit, 3D Secure, iade/iptal\n\n## Preferences\n- Wants fully managed execution - no coding from user side\n- Turkish language for all communication\n\n## Environment Notes\n- Git is NOT installed on this machine\n- Shell: PowerShell (use ; instead of &&)\n"
+    }
+  ],
+  "source_file": "C:\\Users\\omerk\\.verdent\\workspace\\749686240688488448\\MEMORY.md"
+}

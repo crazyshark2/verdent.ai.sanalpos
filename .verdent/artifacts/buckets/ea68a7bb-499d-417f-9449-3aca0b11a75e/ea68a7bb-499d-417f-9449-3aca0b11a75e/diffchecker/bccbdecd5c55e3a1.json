@@ -1,0 +1,15 @@
+{
+  "records": [
+    {
+      "filename": "C:\\Users\\omerk\\.verdent\\workspace\\749686240688488448\\task-skills\\sanal-pos\\state.yaml",
+      "start_line": 1,
+      "end_line": 25,
+      "content_hash": "7577d0bfe2c30bed",
+      "timestamp": "2026-04-21T09:30:11.176130",
+      "session_id": "e4c046b6-244c-439e-9af8-9ac770b588cb",
+      "group_id": "ea68a7bb-499d-417f-9449-3aca0b11a75e",
+      "content_snippet": "current_step: step-1\nstatus: in_progress\nsteps:\n  step-1:\n    status: in_progress\n    result: \"\"\n  step-2:\n    status: pending\n    result: \"\"\n  step-3:\n    status: pending\n    result: \"\"\n  step-4:\n    status: pending\n    result: \"\"\n  step-5:\n    status: pending\n    result: \"\"\n  step-6:\n    status: pending\n    result: \"\"\n  step-7:\n    status: pending\n    result: \"\"\n"
+    }
+  ],
+  "source_file": "C:\\Users\\omerk\\.verdent\\workspace\\749686240688488448\\task-skills\\sanal-pos\\state.yaml"
+}

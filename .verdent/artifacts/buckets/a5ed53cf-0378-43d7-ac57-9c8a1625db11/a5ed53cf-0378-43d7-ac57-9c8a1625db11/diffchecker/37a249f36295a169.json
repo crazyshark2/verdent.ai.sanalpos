@@ -1,0 +1,15 @@
+{
+  "records": [
+    {
+      "filename": "C:\\Users\\omerk\\odoo19-sanal-pos\\payment_sanal_pos\\static\\src\\xml\\installment_selector.xml",
+      "start_line": 1,
+      "end_line": 55,
+      "content_hash": "44f955ab5661e8cf",
+      "timestamp": "2026-04-21T09:44:02.560662",
+      "session_id": "7f2d7a9a-f852-41cb-953d-bd51c19132df",
+      "group_id": "a5ed53cf-0378-43d7-ac57-9c8a1625db11",
+      "content_snippet": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<templates xml:space=\"preserve\">\n\n    <!-- Taksit Se\u00e7ici (\u00d6deme Sayfas\u0131 \u0130\u00e7in) -->\n    <t t-name=\"payment_sanal_pos.InstallmentSelector\">\n        <div class=\"sanal-pos-installment-selector\">\n            <!-- Loading -->\n            <div t-if=\"state.loading\" class=\"text-center py-2\">\n                <i class=\"fa fa-spinner fa-spin\"/>\n                <small class=\"text-muted ms-1\">Taksit se\u00e7enekleri y\u00fckleniyor...</small>\n            </div>\n\n            <!-- Banka Bilgisi -->\n            <div t-if=\"state.bankInfo\" class=\"mb-2\">\n                <small class=\"text-success\">\n                    <i class=\"fa fa-check-circle me-1\"/>\n                    <t t-esc=\"state.bankInfo.bank_name\"/>\n                </small>\n            </div>\n\n            <!-- Hata -->\n            <div t-if=\"state.error\" class=\"text-danger small\">\n                <t t-esc=\"state.error\"/>\n            </div>\n\n            <!-- Taksit Se\u00e7enekleri -->\n            <div t-if=\"!state.loading and state.installments.length > 0\"\n                 class=\"installment-options\">\n                <t t-foreach=\"state.installments\" t-as=\"inst\" t-key=\"inst.count\">\n                    <div class=\"form-check installment-option\"\n                         t-att-class=\"{'selected': state.selectedInstallment === inst.count}\"\n                         t-on-click=\"() => this.selectInstallment(inst.count)\">\n                        <input type=\"radio\" class=\"form-check-input\"\n                               t-att-checked=\"state.selectedInstallment === inst.count\"\n                               t-att-name=\"'installment_' + props.amount\"/>\n                        <label class=\"form-check-label d-flex justify-content-between w-100\">\n                            <span>\n                                <t t-if=\"inst.count === 1\">Tek \u00c7ekim</t>\n                                <t t-else=\"\">\n                                    <t t-esc=\"inst.count\"/> Taksit\n                                </t>\n                            </span>\n                            <span class=\"fw-bold\">\n                                <t t-esc=\"formatCurrency(inst.monthly)\"/>\n                                <t t-if=\"inst.count > 1\">/ay</t>\n                            </span>\n                        </label>\n                    </div>\n                </t>\n            </div>\n        </div>\n    </t>\n\n</templates>\n"
+    }
+  ],
+  "source_file": "C:\\Users\\omerk\\odoo19-sanal-pos\\payment_sanal_pos\\static\\src\\xml\\installment_selector.xml"
+}

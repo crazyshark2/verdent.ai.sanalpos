@@ -1,0 +1,25 @@
+{
+  "records": [
+    {
+      "filename": "C:\\Users\\omerk\\odoo19-sanal-pos\\payment_sanal_pos\\controllers\\main.py",
+      "start_line": 1,
+      "end_line": 8,
+      "content_hash": "73366387d91ba706",
+      "timestamp": "2026-04-21T09:44:18.582713",
+      "session_id": "7f2d7a9a-f852-41cb-953d-bd51c19132df",
+      "group_id": "a5ed53cf-0378-43d7-ac57-9c8a1625db11",
+      "content_snippet": "import json\nimport logging\n\nfrom odoo import fields, http\nfrom odoo.http import request\n\n_logger = logging.getLogger(__name__)\n"
+    },
+    {
+      "filename": "C:\\Users\\omerk\\odoo19-sanal-pos\\payment_sanal_pos\\controllers\\main.py",
+      "start_line": 279,
+      "end_line": 283,
+      "content_hash": "55cef99857430689",
+      "timestamp": "2026-04-21T09:44:18.654129",
+      "session_id": "7f2d7a9a-f852-41cb-953d-bd51c19132df",
+      "group_id": "a5ed53cf-0378-43d7-ac57-9c8a1625db11",
+      "content_snippet": "                if tx:\n                    return tx.provider_code\n\n        return None\n"
+    }
+  ],
+  "source_file": "C:\\Users\\omerk\\odoo19-sanal-pos\\payment_sanal_pos\\controllers\\main.py"
+}

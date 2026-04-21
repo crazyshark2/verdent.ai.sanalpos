@@ -1,0 +1,15 @@
+{
+  "records": [
+    {
+      "filename": "C:\\Users\\omerk\\odoo19-sanal-pos\\payment_sanal_pos\\__manifest__.py",
+      "start_line": 1,
+      "end_line": 64,
+      "content_hash": "cb8467e91de204ae",
+      "timestamp": "2026-04-21T09:30:56.732654",
+      "session_id": "7f2d7a9a-f852-41cb-953d-bd51c19132df",
+      "group_id": "a5ed53cf-0378-43d7-ac57-9c8a1625db11",
+      "content_snippet": "{\n    'name': 'T\u00fcrkiye Sanal POS \u00d6deme Sistemi',\n    'version': '19.0.1.0.0',\n    'category': 'Accounting/Payment Providers',\n    'summary': 'T\u00fcrk bankalar\u0131yla sanal POS entegrasyonu - Taksit, 3D Secure, BIN tan\u0131ma',\n    'description': \"\"\"\nT\u00fcrkiye Sanal POS \u00d6deme Sistemi\n================================\nDesteklenen bankalar:\n- Garanti BBVA\n- Akbank (EstV3)\n- T\u00fcrkiye \u0130\u015f Bankas\u0131 (EstV3)\n- Ziraat Bankas\u0131 (EstV3 / PayFlex)\n- Vak\u0131fbank (PayFlex)\n- Yap\u0131 Kredi (PosNet)\n\n\u00d6zellikler:\n- 3D Secure \u00f6deme ak\u0131\u015f\u0131\n- Taksit y\u00f6netimi (kategori bazl\u0131)\n- BIN numaras\u0131yla otomatik banka tan\u0131ma\n- Tam/k\u0131smi iade ve iptal\n- Detayl\u0131 loglama\n    \"\"\",\n    'author': 'Sanal POS Ekibi',\n    'website': 'https://github.com/omerk/odoo19-sanal-pos',\n    'license': 'LGPL-3',\n    'depends': [\n        'payment',\n        'website_sale',\n        'sale',\n        'account',\n    ],\n    'data': [\n        'security/ir.model.access.csv',\n        'data/payment_method_data.xml',\n        'data/payment_provider_data.xml',\n        'data/installment_default_data.xml',\n        'views/menus.xml',\n        'views/payment_provider_views.xml',\n        'views/installment_views.xml',\n        'views/category_rate_views.xml',\n        'views/bin_views.xml',\n        'views/transaction_log_views.xml',\n        'views/refund_wizard_views.xml',\n        'views/cancel_wizard_views.xml',\n    ],\n    'assets': {\n        'web.assets_frontend': [\n            'payment_sanal_pos/static/src/scss/sanal_pos.scss',\n            'payment_sanal_pos/static/src/js/bin_detector.js',\n            'payment_sanal_pos/static/src/js/installment_selector.js',\n            'payment_sanal_pos/static/src/js/installment_widget.js',\n            'payment_sanal_pos/static/src/js/payment_form.js',\n            'payment_sanal_pos/static/src/xml/installment_widget.xml',\n            'payment_sanal_pos/static/src/xml/payment_form.xml',\n            'payment_sanal_pos/static/src/xml/installment_selector.xml',\n        ],\n    },\n    'post_init_hook': '_post_init_hook',\n    'installable': True,\n    'application': False,\n    'auto_install': False,\n}\n"
+    }
+  ],
+  "source_file": "C:\\Users\\omerk\\odoo19-sanal-pos\\payment_sanal_pos\\__manifest__.py"
+}

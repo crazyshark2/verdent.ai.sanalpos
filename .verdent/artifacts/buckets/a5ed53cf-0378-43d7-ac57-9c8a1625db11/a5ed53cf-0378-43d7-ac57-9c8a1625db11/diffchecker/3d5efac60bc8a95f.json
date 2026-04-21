@@ -1,0 +1,15 @@
+{
+  "records": [
+    {
+      "filename": "C:\\Users\\omerk\\odoo19-sanal-pos\\payment_sanal_pos\\views\\cancel_wizard_views.xml",
+      "start_line": 1,
+      "end_line": 37,
+      "content_hash": "f326027f91284ee1",
+      "timestamp": "2026-04-21T09:41:14.594705",
+      "session_id": "7f2d7a9a-f852-41cb-953d-bd51c19132df",
+      "group_id": "a5ed53cf-0378-43d7-ac57-9c8a1625db11",
+      "content_snippet": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<odoo>\n\n    <!-- \u0130ptal Wizard Form View -->\n    <record id=\"sanal_pos_cancel_wizard_form\" model=\"ir.ui.view\">\n        <field name=\"name\">sanal.pos.cancel.wizard.form</field>\n        <field name=\"model\">sanal.pos.cancel.wizard</field>\n        <field name=\"arch\" type=\"xml\">\n            <form>\n                <group>\n                    <group>\n                        <field name=\"transaction_id\"/>\n                        <field name=\"amount\"/>\n                    </group>\n                </group>\n                <group>\n                    <field name=\"reason\" placeholder=\"\u0130ptal nedenini yaz\u0131n...\"/>\n                </group>\n                <footer>\n                    <button name=\"action_cancel\" type=\"object\"\n                            string=\"\u0130ptal Et\" class=\"btn-danger\"/>\n                    <button string=\"Vazge\u00e7\" class=\"btn-secondary\" special=\"cancel\"/>\n                </footer>\n            </form>\n        </field>\n    </record>\n\n    <!-- \u0130ptal Wizard Action -->\n    <record id=\"action_sanal_pos_cancel_wizard\" model=\"ir.actions.act_window\">\n        <field name=\"name\">Sanal POS \u0130ptal</field>\n        <field name=\"res_model\">sanal.pos.cancel.wizard</field>\n        <field name=\"view_mode\">form</field>\n        <field name=\"target\">new</field>\n    </record>\n\n</odoo>\n"
+    }
+  ],
+  "source_file": "C:\\Users\\omerk\\odoo19-sanal-pos\\payment_sanal_pos\\views\\cancel_wizard_views.xml"
+}

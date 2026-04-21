@@ -1,0 +1,15 @@
+{
+  "records": [
+    {
+      "filename": "C:\\Users\\omerk\\odoo19-sanal-pos\\payment_sanal_pos\\models\\product_template.py",
+      "start_line": 1,
+      "end_line": 17,
+      "content_hash": "576ef4121bb690f8",
+      "timestamp": "2026-04-21T09:33:26.146741",
+      "session_id": "7f2d7a9a-f852-41cb-953d-bd51c19132df",
+      "group_id": "a5ed53cf-0378-43d7-ac57-9c8a1625db11",
+      "content_snippet": "from odoo import fields, models\n\n\nclass ProductTemplate(models.Model):\n    _inherit = 'product.template'\n\n    sanal_pos_installment_enabled = fields.Boolean(\n        string=\"Taksit Tablosu G\u00f6ster\",\n        default=True,\n        help=\"\u00dcr\u00fcn sayfas\u0131nda taksit se\u00e7enekleri tablosunu g\u00f6sterir.\",\n    )\n    sanal_pos_max_installment = fields.Integer(\n        string=\"Maksimum Taksit\",\n        default=0,\n        help=\"0 = provider ayarlar\u0131ndaki varsay\u0131lan\u0131 kullan\",\n    )\n"
+    }
+  ],
+  "source_file": "C:\\Users\\omerk\\odoo19-sanal-pos\\payment_sanal_pos\\models\\product_template.py"
+}

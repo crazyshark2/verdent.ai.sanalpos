@@ -1,0 +1,15 @@
+{
+  "records": [
+    {
+      "filename": "C:\\Users\\omerk\\odoo19-sanal-pos\\payment_sanal_pos\\data\\payment_method_data.xml",
+      "start_line": 1,
+      "end_line": 13,
+      "content_hash": "b64103ee3c0e7337",
+      "timestamp": "2026-04-21T09:42:16.143874",
+      "session_id": "7f2d7a9a-f852-41cb-953d-bd51c19132df",
+      "group_id": "a5ed53cf-0378-43d7-ac57-9c8a1625db11",
+      "content_snippet": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<odoo noupdate=\"1\">\n\n    <!-- Sanal POS \u00d6deme Y\u00f6ntemi -->\n    <record id=\"payment_method_sanal_pos_card\" model=\"payment.method\">\n        <field name=\"name\">Kredi/Banka Kart\u0131</field>\n        <field name=\"code\">card</field>\n        <field name=\"primary_payment_method_id\" ref=\"payment.payment_method_card\"/>\n        <field name=\"active\">True</field>\n    </record>\n\n</odoo>\n"
+    }
+  ],
+  "source_file": "C:\\Users\\omerk\\odoo19-sanal-pos\\payment_sanal_pos\\data\\payment_method_data.xml"
+}

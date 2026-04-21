@@ -1,0 +1,15 @@
+{
+  "records": [
+    {
+      "filename": "C:\\Users\\omerk\\.verdent\\workspace\\749686240688488448\\pending-tracker.json",
+      "start_line": 1,
+      "end_line": 13,
+      "content_hash": "1ebde33d243cd5ce",
+      "timestamp": "2026-04-21T09:20:36.987274",
+      "session_id": "eae44e16-2f58-4d02-95a6-fe2bf33aded6",
+      "group_id": "ea68a7bb-499d-417f-9449-3aca0b11a75e",
+      "content_snippet": "{\n  \"items\": [\n    {\n      \"id\": \"pending-001\",\n      \"title\": \"Odoo 19 T\u00fcrkiye Sanal POS \u00d6deme Sistemi\",\n      \"description\": \"Tam kapsaml\u0131 sanal POS mod\u00fcl\u00fc: banka gateway entegrasyonlar\u0131, kategori bazl\u0131 taksit, \u00fcr\u00fcn sayfas\u0131nda taksit tablosu, \u00f6deme sayfas\u0131nda kart tan\u0131ma + taksit se\u00e7imi, admin paneli, 3D Secure, geri d\u00f6n\u00fc\u015fler\",\n      \"status\": \"in_progress\",\n      \"created\": \"2026-04-21\",\n      \"projectId\": 1\n    }\n  ]\n}\n"
+    }
+  ],
+  "source_file": "C:\\Users\\omerk\\.verdent\\workspace\\749686240688488448\\pending-tracker.json"
+}

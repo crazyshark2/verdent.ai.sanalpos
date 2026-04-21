@@ -1,0 +1,15 @@
+{
+  "records": [
+    {
+      "filename": "C:\\Users\\omerk\\odoo19-sanal-pos\\payment_sanal_pos\\tests\\test_gateway_estv3.py",
+      "start_line": 1,
+      "end_line": 61,
+      "content_hash": "48208bb62c17530d",
+      "timestamp": "2026-04-21T09:45:08.242940",
+      "session_id": "7f2d7a9a-f852-41cb-953d-bd51c19132df",
+      "group_id": "a5ed53cf-0378-43d7-ac57-9c8a1625db11",
+      "content_snippet": "from odoo.tests.common import TransactionCase\n\n\nclass TestEstV3Gateway(TransactionCase):\n    \"\"\"EstV3 Gateway (Akbank/\u0130\u015fbank/Ziraat) unit testleri.\"\"\"\n\n    @classmethod\n    def setUpClass(cls):\n        super().setUpClass()\n        cls.provider = cls.env['payment.provider'].create({\n            'name': 'Akbank Test',\n            'code': 'sanal_pos_estv3',\n            'state': 'test',\n            'sanal_pos_gateway_type': 'estv3',\n            'sanal_pos_bank_name': 'akbank',\n            'sanal_pos_merchant_id': '100100000',\n            'sanal_pos_terminal_id': '10010000',\n            'sanal_pos_store_key': 'TRPS0200',\n            'sanal_pos_provision_user': 'apiuser',\n            'sanal_pos_provision_password': 'apipassword',\n            'sanal_pos_api_url_test': 'https://entegrasyon.asseco-see.com.tr/fim/api',\n            'sanal_pos_3d_gate_url_test': 'https://entegrasyon.asseco-see.com.tr/fim/est3Dgate',\n        })\n\n    def test_gateway_creation(self):\n        \"\"\"Gateway instance olu\u015fturma.\"\"\"\n        gateway = self.provider._sanal_pos_get_gateway()\n        self.assertEqual(gateway.__class__.__name__, 'EstV3Gateway')\n\n    def test_3d_form_data(self):\n        \"\"\"3D form verisi olu\u015fturma.\"\"\"\n        gateway = self.provider._sanal_pos_get_gateway()\n        order = {\n            'order_id': 'TEST456',\n            'amount': 250.00,\n            'currency': 'TRY',\n            'installment': 3,\n            'success_url': 'https://example.com/success',\n            'fail_url': 'https://example.com/fail',\n        }\n        card = {\n            'number': '5571135571135575',\n            'holder': 'TEST USER',\n            'exp_month': '12',\n            'exp_year': '2030',\n            'cvv': '123',\n        }\n        result = gateway.make_3d_form_data(order, card)\n\n        self.assertIn('gateway_url', result)\n        self.assertIn('inputs', result)\n        self.assertEqual(result['inputs']['oid'], 'TEST456')\n        self.assertEqual(result['inputs']['amount'], '250.00')\n        self.assertEqual(result['inputs']['taksit'], '3')\n        self.assertIn('hash', result['inputs'])\n\n    def test_hash_validation(self):\n        \"\"\"Hash do\u011frulama - sahte veri ile ba\u015far\u0131s\u0131z.\"\"\"\n        gateway = self.provider._sanal_pos_get_gateway()\n        self.assertFalse(gateway.validate_hash({'hash': 'fake_hash'}))\n"
+    }
+  ],
+  "source_file": "C:\\Users\\omerk\\odoo19-sanal-pos\\payment_sanal_pos\\tests\\test_gateway_estv3.py"
+}

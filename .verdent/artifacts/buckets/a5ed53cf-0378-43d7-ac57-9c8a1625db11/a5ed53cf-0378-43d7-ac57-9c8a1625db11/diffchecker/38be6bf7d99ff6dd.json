@@ -1,0 +1,15 @@
+{
+  "records": [
+    {
+      "filename": "C:\\Users\\omerk\\odoo19-sanal-pos\\payment_sanal_pos\\__init__.py",
+      "start_line": 1,
+      "end_line": 7,
+      "content_hash": "40844c299e133484",
+      "timestamp": "2026-04-21T09:30:56.742362",
+      "session_id": "7f2d7a9a-f852-41cb-953d-bd51c19132df",
+      "group_id": "a5ed53cf-0378-43d7-ac57-9c8a1625db11",
+      "content_snippet": "from . import models\nfrom . import controllers\nfrom . import gateways\nfrom . import wizards\n\nfrom .hooks import _post_init_hook\n"
+    }
+  ],
+  "source_file": "C:\\Users\\omerk\\odoo19-sanal-pos\\payment_sanal_pos\\__init__.py"
+}

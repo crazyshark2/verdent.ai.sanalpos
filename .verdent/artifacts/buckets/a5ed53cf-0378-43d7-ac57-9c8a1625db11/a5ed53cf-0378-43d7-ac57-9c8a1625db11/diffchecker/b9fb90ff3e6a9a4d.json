@@ -1,0 +1,15 @@
+{
+  "records": [
+    {
+      "filename": "C:\\Users\\omerk\\odoo19-sanal-pos\\payment_sanal_pos\\models\\__init__.py",
+      "start_line": 1,
+      "end_line": 8,
+      "content_hash": "f2825a87e4b408a2",
+      "timestamp": "2026-04-21T09:30:56.759063",
+      "session_id": "7f2d7a9a-f852-41cb-953d-bd51c19132df",
+      "group_id": "a5ed53cf-0378-43d7-ac57-9c8a1625db11",
+      "content_snippet": "from . import payment_provider\nfrom . import payment_transaction\nfrom . import sanal_pos_bin\nfrom . import sanal_pos_installment\nfrom . import sanal_pos_category_rate\nfrom . import sanal_pos_transaction_log\nfrom . import product_template\n"
+    }
+  ],
+  "source_file": "C:\\Users\\omerk\\odoo19-sanal-pos\\payment_sanal_pos\\models\\__init__.py"
+}

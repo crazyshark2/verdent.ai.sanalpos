@@ -1,0 +1,15 @@
+{
+  "records": [
+    {
+      "filename": "C:\\Users\\omerk\\odoo19-sanal-pos\\payment_sanal_pos\\views\\category_rate_views.xml",
+      "start_line": 1,
+      "end_line": 52,
+      "content_hash": "ea484a2200367cb7",
+      "timestamp": "2026-04-21T09:41:14.506456",
+      "session_id": "7f2d7a9a-f852-41cb-953d-bd51c19132df",
+      "group_id": "a5ed53cf-0378-43d7-ac57-9c8a1625db11",
+      "content_snippet": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<odoo>\n\n    <!-- Kategori Bazl\u0131 Oran Tree View -->\n    <record id=\"sanal_pos_category_rate_tree\" model=\"ir.ui.view\">\n        <field name=\"name\">sanal.pos.category.rate.tree</field>\n        <field name=\"model\">sanal.pos.category.rate</field>\n        <field name=\"arch\" type=\"xml\">\n            <tree editable=\"bottom\">\n                <field name=\"installment_id\"/>\n                <field name=\"category_id\"/>\n                <field name=\"interest_rate\"/>\n                <field name=\"is_active\" widget=\"boolean_toggle\"/>\n            </tree>\n        </field>\n    </record>\n\n    <!-- Kategori Bazl\u0131 Oran Search View -->\n    <record id=\"sanal_pos_category_rate_search\" model=\"ir.ui.view\">\n        <field name=\"name\">sanal.pos.category.rate.search</field>\n        <field name=\"model\">sanal.pos.category.rate</field>\n        <field name=\"arch\" type=\"xml\">\n            <search>\n                <field name=\"category_id\"/>\n                <field name=\"installment_id\"/>\n                <filter name=\"active\" string=\"Aktif\" domain=\"[('is_active','=',True)]\"/>\n                <group expand=\"0\" string=\"Grupla\">\n                    <filter name=\"group_category\" string=\"Kategori\"\n                            context=\"{'group_by':'category_id'}\"/>\n                </group>\n            </search>\n        </field>\n    </record>\n\n    <!-- Kategori Bazl\u0131 Oran Action -->\n    <record id=\"action_sanal_pos_category_rate\" model=\"ir.actions.act_window\">\n        <field name=\"name\">Kategori Bazl\u0131 Oranlar</field>\n        <field name=\"res_model\">sanal.pos.category.rate</field>\n        <field name=\"view_mode\">tree</field>\n        <field name=\"context\">{'search_default_active': 1}</field>\n        <field name=\"help\" type=\"html\">\n            <p class=\"o_view_nocontent_smiling_face\">\n                Kategori bazl\u0131 taksit oran\u0131 ekleyin\n            </p>\n            <p>\n                Belirli \u00fcr\u00fcn kategorileri i\u00e7in farkl\u0131 faiz oranlar\u0131 tan\u0131mlayabilirsiniz.\n            </p>\n        </field>\n    </record>\n\n</odoo>\n"
+    }
+  ],
+  "source_file": "C:\\Users\\omerk\\odoo19-sanal-pos\\payment_sanal_pos\\views\\category_rate_views.xml"
+}

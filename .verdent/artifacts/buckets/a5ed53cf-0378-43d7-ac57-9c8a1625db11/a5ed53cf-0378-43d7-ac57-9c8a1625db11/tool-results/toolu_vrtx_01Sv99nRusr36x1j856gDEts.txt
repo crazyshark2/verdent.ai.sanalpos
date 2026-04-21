@@ -1,0 +1,55 @@
+# Turkish Bank POS Gateway Architecture Analysis
+
+Based on the page content, here's a comprehensive overview of the Turkish bank POS gateway system:
+
+## **Architecture Overview**
+
+The package provides a **unified interface class** (`PosInterface`) that enables the use of all Turkish bank virtual POS systems through a common API, eliminating the need to rewrite code when switching between different banks or payment models.
+
+---
+
+## **Supported Banks & Gateways**
+
+| Gateway | Banks | Payment Types | Query Types |
+|---------|-------|---------------|-------------|
+| **Tosla** (formerly AKÖde) | ? | NonSecure, 3DPay, 3DHost | Cancel, Refund, Status, Order History, Custom Query |
+| **ParamPos** | ? | NonSecure, 3DSecure, 3DPay, 3DHost | Cancel, Refund, Status, History, Custom Query |
+| **AkbankPos** | Akbank | NonSecure, 3DSecure, 3DPay, 3DHost, Recurring | Cancel, Refund, Order History, History, Custom Query |
+| **EstV3Pos** (Asseco/Payten) | Akbank, TEB, İşbank, Şekerbank, Halkbank, Finansbank, Ziraat | NonSecure, 3DSecure, 3DPay, 3DHost, 3DPayHost, Recurring | Cancel, Refund, Status, Order History, Custom Query |
+| **PayFlex MPI VPOS V4** | Ziraat, Vakıfbank, İşbank | NonSecure, 3DSecure, Recurring | Cancel, Refund, Status, Custom Query |
+| **PayFlex Common Payment V4** | Ziraat, Vakıfbank, İşbank | 3DPay, 3DHost | Custom Query |
+| **Garanti Virtual POS** | Garanti | NonSecure, 3DSecure, 3DPay, 3DHost, Recurring | Cancel, Refund, Status, Order History, History, Custom Query |
+| **PosNet** | YapıKredi | NonSecure, 3DSecure | Cancel, Refund, Status, Custom Query |
+| **PosNetV1** (JSON API) | Albaraka Türk | NonSecure, 3DSecure | Cancel, Refund, Status, Custom Query |
+| **PayFor** | Finansbank, Enpara, Ziraat Katılım | NonSecure, 3DSecure, 3DPay, 3DHost | Cancel, Refund, Status, Order History, History, Custom Query |
+| **InterPOS** | Deniz Bank | NonSecure, 3DSecure, 3DPay, 3DHost | Cancel, Refund, Status, Custom Query |
+| **Kuveyt POS TDV2.0.0** | Kuveyt Türk | NonSecure, 3DSecure | Cancel, Refund, Status (SOAP), Custom Query |
+| **VakifKatilimPos** | Vakıf Katılım | NonSecure, 3DSecure, 3DHost | Cancel, Refund, Status, Order History, History, Custom Query |
+
+---
+
+## **Gateway Classes**
+
+Each bank is mapped to a gateway class in the configuration:
+
+```php
+'banks' => [
+    'akbank' => [
+        'name'  => 'AKBANK T.A.S.',
+        'class' => Mews\Pos\Gateways\EstV3Pos::class,
+        'gateway_endpoints' => [
+            'payment_api'     => 'https://www.sanalakpos.com/fim/api',
+            'gateway_3d'      => 'https://www.sanalakpos.com/fim/est3Dgate',
+            'gateway_3d_host' => 'https://sanalpos.sanalakpos.com.tr/fim/est3Dgate',
+        ],
+    ],
+]
+```
+
+---
+
+## **Payment Flow Models**
+
+The system supports four primary payment models:
+
+1. **NonSecure** (`MODEL_NON_[Response truncated due to max_tokens limit]

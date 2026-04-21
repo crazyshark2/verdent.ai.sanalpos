@@ -1,0 +1,43 @@
+# Odoo 19 Payment Provider Model - Key Fields and Features
+
+Based on the GitHub repository structure for Odoo 19, here's what the payment provider model contains:
+
+## Model Location
+`odoo/addons/payment/models/payment_provider.py`
+
+## Core Fields
+
+The payment provider model in Odoo 19 includes the following key fields:
+
+### Essential Fields:
+- **`code`** - Identifier for the payment provider (e.g., 'stripe', 'paypal')
+- **`state`** - Status of the provider (typically 'enabled' or 'disabled')
+- **`company_id`** - Foreign key linking to the company that owns this payment provider
+- **`name`** - Display name of the payment provider
+
+### Payment Methods:
+- **`payment_method_ids`** - Relationship field linking to available payment methods
+- Payment methods can include:
+  - Credit/Debit cards
+  - Bank transfers
+  - Digital wallets
+  - Other provider-specific methods
+
+## Feature Support
+
+The payment provider model supports:
+
+1. **Multi-company support** - Via `company_id` field
+2. **Multiple payment methods** - Through `payment_method_ids` relationship
+3. **Provider activation/deactivation** - Via `state` field
+4. **Provider identification** - Through unique `code` field
+
+## Related Components
+
+The payment module structure includes:
+- **Controllers** - Handle payment processing workflows
+- **Data** - Configuration and default payment provider data
+- **i18n** - Internationalization support
+- **Models** - Core payment-related models
+
+This architecture allows Odoo 19 to support multiple payment providers with flexible configuration per company and payment method.

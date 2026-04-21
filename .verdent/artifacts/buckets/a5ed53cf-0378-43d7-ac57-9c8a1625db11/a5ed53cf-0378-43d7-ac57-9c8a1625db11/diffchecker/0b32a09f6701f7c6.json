@@ -1,0 +1,15 @@
+{
+  "records": [
+    {
+      "filename": "C:\\Users\\omerk\\odoo19-sanal-pos\\payment_sanal_pos\\models\\sanal_pos_transaction_log.py",
+      "start_line": 1,
+      "end_line": 49,
+      "content_hash": "881c5e8c284a35d3",
+      "timestamp": "2026-04-21T09:33:26.119159",
+      "session_id": "7f2d7a9a-f852-41cb-953d-bd51c19132df",
+      "group_id": "a5ed53cf-0378-43d7-ac57-9c8a1625db11",
+      "content_snippet": "from odoo import fields, models\n\n\nclass SanalPosTransactionLog(models.Model):\n    _name = 'sanal.pos.transaction.log'\n    _description = 'Sanal POS \u0130\u015flem Logu'\n    _order = 'create_date desc'\n\n    transaction_id = fields.Many2one(\n        'payment.transaction',\n        string=\"\u0130\u015flem\",\n        index=True,\n        ondelete='cascade',\n    )\n    provider_id = fields.Many2one(\n        'payment.provider',\n        string=\"\u00d6deme Sa\u011flay\u0131c\u0131\",\n        index=True,\n    )\n    log_type = fields.Selection(\n        [\n            ('request', \"API \u0130ste\u011fi\"),\n            ('response', \"API Yan\u0131t\u0131\"),\n            ('3d_redirect', \"3D Y\u00f6nlendirme\"),\n            ('3d_callback', \"3D Geri D\u00f6n\u00fc\u015f\"),\n            ('error', \"Hata\"),\n            ('refund', \"\u0130ade\"),\n            ('cancel', \"\u0130ptal\"),\n            ('status_query', \"Durum Sorgulama\"),\n        ],\n        string=\"Log Tipi\",\n        required=True,\n    )\n    direction = fields.Selection(\n        [\n            ('outgoing', \"Giden\"),\n            ('incoming', \"Gelen\"),\n        ],\n        string=\"Y\u00f6n\",\n    )\n    url = fields.Char(string=\"Endpoint URL\")\n    request_data = fields.Text(string=\"\u0130stek Verisi\")\n    response_data = fields.Text(string=\"Yan\u0131t Verisi\")\n    http_status = fields.Integer(string=\"HTTP Durum Kodu\")\n    duration_ms = fields.Integer(string=\"S\u00fcre (ms)\")\n    is_success = fields.Boolean(string=\"Ba\u015far\u0131l\u0131\")\n    error_message = fields.Text(string=\"Hata Mesaj\u0131\")\n    ip_address = fields.Char(string=\"IP Adresi\")\n"
+    }
+  ],
+  "source_file": "C:\\Users\\omerk\\odoo19-sanal-pos\\payment_sanal_pos\\models\\sanal_pos_transaction_log.py"
+}

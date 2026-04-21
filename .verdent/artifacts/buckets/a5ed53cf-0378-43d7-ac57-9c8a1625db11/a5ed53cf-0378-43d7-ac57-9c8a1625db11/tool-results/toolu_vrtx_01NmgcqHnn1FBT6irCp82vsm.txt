@@ -1,0 +1,65 @@
+# Turkey BIN List Database - Structure & Format
+
+Based on the GitHub repository, here's the complete information about the Turkey BIN List database:
+
+## **Available Formats**
+
+| Format | File Name | Best For |
+|--------|-----------|----------|
+| **JSON** | `turkey_bin_list.json` | Developers & Web Applications |
+| **CSV** | `turkey_bin_list.csv` | Database Imports (SQL) |
+| **Excel** | `turkey_bin_list.xlsx` | Analysis & Reporting |
+
+---
+
+## **CSV/Database Fields (5 Fields)**
+
+| Field | Description | Example |
+|-------|-------------|---------|
+| **BIN** | First 6 digits of the card (IIN) | `554960` |
+| **Network** | Card scheme/network | `MASTERCARD`, `VISA`, `TROY` |
+| **Type** | Card type | `CREDIT`, `DEBIT` |
+| **Category** | Card tier/segment | `PLATINUM`, `GOLD`, `CLASSIC`, `STANDARD` |
+| **Issuer** | Bank name | `TURKIYE GARANTI BANKASI A.S.` |
+
+---
+
+## **Dataset Overview**
+
+- **Total Records**: 1,400+ card prefixes
+- **Region**: Turkey
+- **Data Status**: Up to date (2026)
+- **License**: MIT
+- **Last Updated**: January 2, 2026
+
+---
+
+## **Sample JSON Structure**
+
+```json
+[
+  {
+    "BIN": "405040",
+    "Network": "VISA",
+    "Type": "DEBIT",
+    "Category": "CLASSIC",
+    "Issuer": "FUPS BANK ANONIM SIRKETI"
+  },
+  {
+    "BIN": "979288",
+    "Network": "TROY",
+    "Type": "DEBIT",
+    "Category": "STANDARD",
+    "Issuer": "TURKIYE VAKIFLAR BANKASI"
+  }
+]
+```
+
+---
+
+## **Use Cases**
+
+- E-commerce payment validation
+- Fintech applications
+- Payment gateway integrations (Iyzico, PayTR, Stripe)
+- Data analysis and reporting

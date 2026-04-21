@@ -1,0 +1,113 @@
+# Garanti BBVA Sanal POS - 3D Secure Entegrasyonu Analizi
+
+Sağlanan kod parçasına göre, Garanti BBVA 3D Secure entegrasyonunun temel yapısı şu şekildedir:
+
+## 1. **3D Secure API Endpoint**
+
+```php
+$this->send(
+    $contents,
+    $txType,
+    PosInterface::MODEL_3D_SECURE,
+    $this->getApiURL()  // Ana API URL'si
+);
+```
+
+- **Endpoint**: `$this->getApiURL()` metodu tarafından döndürülen URL
+- **HTTP Method**: `POST`
+- **Content Type**: Serialized XML/JSON formatında
+
+## 2. **Request Format**
+
+```php
+$requestData = $this->requestDataMapper->create3DPaymentRequestData(
+    $this->account,
+    $order,
+    $txType,
+    $request->all()
+);
+
+$contents = $this->serializer->encode($requestData, $txType);
+```
+
+**Request Yapısı:**
+- Account bilgileri
+- Order detayları
+- Transaction Type (PAY, PRE_AUTH, POST_AUTH, vb.)
+- Request parametreleri
+
+## 3. **Hash Hesaplama**
+
+```php
+if (
+    !$this->is3DHashCheckDisabled()
+    && !$this->requestDataMapper->getCrypt()->check3DHash(
+        $this->account, 
+        $request->all()
+    )
+) {
+    throw new HashMismatchException();
+}
+```
+
+**Hash Kontrol Süreci:**
+- `getCrypt()->check3DHash()` metodu hash doğrulaması yapar
+- Account ve request parametreleri kullanılır
+- Hash uyuşmazlığı durumunda `HashMismatchException` fırlatılır
+
+## 4. **3D Form Verisi**
+
+```php
+public function get3DFormData(
+    array $order,
+    string $paymentModel,
+    string $txType,
+    ?CreditCardInterface $creditCard = null
+): array {
+    return $this->requestDataMapper->create3DFormData(
+        $this->account,
+        $order,
+        $paymentModel,
+        $txType,
+        $this->get3DGatewayURL($paymentModel),
+        $creditCard
+    );
+}
+```
+
+**Dönen Format:**
+```php
+[
+    'gateway' => string,      // 3D Gateway URL'si
+    'method'  => 'POST'|'GET',
+    'inputs'  => array        // Form input parametreleri
+]
+```
+
+## 5. **Desteklenen Transaction Tipleri**
+
+```php
+PosInterface::TX_TYPE_PAY           // Ödeme
+PosInterface::TX_TYPE_PAY_PRE_AUTH  // Ön Yetkilendirme
+PosInterface::TX_TYPE_PAY_POST_AUTH // Sonrası Yetkilendirme
+```
+
+**Desteklenen Modeller:**
+- `MODEL_3D_SECURE`
+- `MODEL_3D_PAY`
+- `MODEL_NON_SECURE`
+
+## 6. **Response Mapping**
+
+```php
+$this->response = $this->responseDataMapper->map3DPaymentData(
+    $request->all(),
+    $bankResponse,
+    $txType,
+    $order
+);
+```
+
+---
+
+**Not:** Tam endpoint URL'si, hash algoritması ve detaylı request/response formatı için `requestDataMapper` ve `responseDataMapper` sınıflarının kaynak koduna ihtiyaç vardır.

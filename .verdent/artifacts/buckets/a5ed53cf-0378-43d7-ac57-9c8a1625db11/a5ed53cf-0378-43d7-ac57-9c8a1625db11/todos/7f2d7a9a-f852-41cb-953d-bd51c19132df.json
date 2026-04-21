@@ -1,0 +1,67 @@
+[
+  {
+    "content": "Faz 1: Temel Altyapı - __manifest__.py, __init__.py dosyaları",
+    "note": "",
+    "status": "completed"
+  },
+  {
+    "content": "Faz 1: Model tanımları (tüm modeller)",
+    "note": "",
+    "status": "completed"
+  },
+  {
+    "content": "Faz 1: BaseGateway abstract sınıfı + helper modüller",
+    "note": "",
+    "status": "completed"
+  },
+  {
+    "content": "Faz 1: BIN veritabanı CSV + post_init_hook",
+    "note": "",
+    "status": "completed"
+  },
+  {
+    "content": "Faz 1: security/ir.model.access.csv",
+    "note": "",
+    "status": "in_progress"
+  },
+  {
+    "content": "Faz 1: Menü ve temel view XML dosyaları",
+    "note": "",
+    "status": "pending"
+  },
+  {
+    "content": "Faz 2: GarantiGateway implementasyonu",
+    "note": "",
+    "status": "completed"
+  },
+  {
+    "content": "Faz 3: EstV3 + PayFlex + PosNet Gateway'leri",
+    "note": "",
+    "status": "completed"
+  },
+  {
+    "content": "Faz 4: Controller endpoint'leri",
+    "note": "",
+    "status": "pending"
+  },
+  {
+    "content": "Faz 5: OWL Frontend bileşenleri",
+    "note": "",
+    "status": "pending"
+  },
+  {
+    "content": "Faz 6: İade/İptal wizard'ları",
+    "note": "",
+    "status": "pending"
+  },
+  {
+    "content": "Faz 7: View XML + Data XML dosyaları",
+    "note": "",
+    "status": "pending"
+  },
+  {
+    "content": "Doğrulama: Syntax + import kontrolü",
+    "note": "<reminder> use Verifier subagent",
+    "status": "pending"
+  }
+]

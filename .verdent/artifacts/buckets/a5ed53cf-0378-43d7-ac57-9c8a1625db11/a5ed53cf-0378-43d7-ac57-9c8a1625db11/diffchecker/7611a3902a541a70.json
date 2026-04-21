@@ -1,0 +1,15 @@
+{
+  "records": [
+    {
+      "filename": "C:\\Users\\omerk\\odoo19-sanal-pos\\payment_sanal_pos\\static\\src\\scss\\sanal_pos.scss",
+      "start_line": 1,
+      "end_line": 95,
+      "content_hash": "be4a7f832f4dd060",
+      "timestamp": "2026-04-21T09:44:02.575809",
+      "session_id": "7f2d7a9a-f852-41cb-953d-bd51c19132df",
+      "group_id": "a5ed53cf-0378-43d7-ac57-9c8a1625db11",
+      "content_snippet": "/* Sanal POS \u00d6deme Sistemi Stilleri */\n\n.sanal-pos-payment-form {\n    max-width: 500px;\n\n    .input-group-text {\n        background-color: #fff;\n        i {\n            font-size: 1.5rem;\n            color: #6c757d;\n        }\n    }\n\n    .list-group-item {\n        cursor: pointer;\n        transition: all 0.2s ease;\n\n        &:hover {\n            background-color: #f8f9fa;\n        }\n\n        &.active {\n            background-color: #0d6efd;\n            border-color: #0d6efd;\n        }\n    }\n}\n\n.sanal-pos-installment-widget {\n    .card-header {\n        background-color: #f8f9fa;\n\n        h5 {\n            font-size: 1rem;\n            color: #495057;\n        }\n    }\n\n    .btn-sm {\n        font-size: 0.8rem;\n        padding: 0.25rem 0.75rem;\n    }\n\n    table {\n        font-size: 0.9rem;\n\n        th {\n            background-color: #f8f9fa;\n            font-weight: 600;\n        }\n    }\n}\n\n.sanal-pos-installment-selector {\n    .installment-option {\n        padding: 0.5rem 0.75rem;\n        border: 1px solid #dee2e6;\n        border-radius: 0.375rem;\n        margin-bottom: 0.25rem;\n        cursor: pointer;\n        transition: all 0.15s ease;\n\n        &:hover {\n            background-color: #f8f9fa;\n            border-color: #adb5bd;\n        }\n\n        &.selected {\n            background-color: #e7f1ff;\n            border-color: #0d6efd;\n        }\n\n        .form-check-label {\n            cursor: pointer;\n        }\n    }\n}\n\n/* 3D Secure Y\u00f6nlendirme */\n.sanal-pos-3d-redirect {\n    text-align: center;\n    padding: 2rem;\n\n    .spinner-border {\n        width: 3rem;\n        height: 3rem;\n    }\n\n    p {\n        font-size: 1.1rem;\n        margin-top: 1rem;\n        color: #495057;\n    }\n}\n"
+    }
+  ],
+  "source_file": "C:\\Users\\omerk\\odoo19-sanal-pos\\payment_sanal_pos\\static\\src\\scss\\sanal_pos.scss"
+}
