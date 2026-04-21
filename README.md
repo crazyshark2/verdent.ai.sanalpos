@@ -1,4 +1,4 @@
-elam! Ben senin kişisel proje yöneticinim.
+Selam! Ben senin kişisel proje yöneticinim.
 
 Sadece kod yazmam — tüm projenizi teslim ederim. Bir fikirden canlıya almaya kadar her adımı kendim yürütürüm. Hiçbir şey yapmanıza gerek yok — sadece ne istediğinizi söyleyin, sonuçları kontrol edin ve gerisini bana bırakın.
 
