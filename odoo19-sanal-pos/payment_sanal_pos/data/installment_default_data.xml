@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <!--
+        Varsayılan taksit oranları.
+        Gerçek oranlar banka anlaşmasına göre admin panelinden güncellenmeli.
+    -->
+
+    <!-- Garanti BBVA - Visa Taksit Oranları -->
+    <record id="installment_garanti_visa_2" model="sanal.pos.installment">
+        <field name="provider_id" ref="payment_provider_garanti"/>
+        <field name="card_network">visa</field>
+        <field name="installment_count">2</field>
+        <field name="interest_rate">0.0</field>
+        <field name="is_active">True</field>
+    </record>
+    <record id="installment_garanti_visa_3" model="sanal.pos.installment">
+        <field name="provider_id" ref="payment_provider_garanti"/>
+        <field name="card_network">visa</field>
+        <field name="installment_count">3</field>
+        <field name="interest_rate">1.5</field>
+        <field name="is_active">True</field>
+    </record>
+    <record id="installment_garanti_visa_6" model="sanal.pos.installment">
+        <field name="provider_id" ref="payment_provider_garanti"/>
+        <field name="card_network">visa</field>
+        <field name="installment_count">6</field>
+        <field name="interest_rate">3.5</field>
+        <field name="is_active">True</field>
+    </record>
+    <record id="installment_garanti_visa_9" model="sanal.pos.installment">
+        <field name="provider_id" ref="payment_provider_garanti"/>
+        <field name="card_network">visa</field>
+        <field name="installment_count">9</field>
+        <field name="interest_rate">5.5</field>
+        <field name="is_active">True</field>
+    </record>
+    <record id="installment_garanti_visa_12" model="sanal.pos.installment">
+        <field name="provider_id" ref="payment_provider_garanti"/>
+        <field name="card_network">visa</field>
+        <field name="installment_count">12</field>
+        <field name="interest_rate">8.0</field>
+        <field name="is_active">True</field>
+    </record>
+
+    <!-- Garanti BBVA - Mastercard Taksit Oranları -->
+    <record id="installment_garanti_mc_2" model="sanal.pos.installment">
+        <field name="provider_id" ref="payment_provider_garanti"/>
+        <field name="card_network">mastercard</field>
+        <field name="installment_count">2</field>
+        <field name="interest_rate">0.0</field>
+        <field name="is_active">True</field>
+    </record>
+    <record id="installment_garanti_mc_3" model="sanal.pos.installment">
+        <field name="provider_id" ref="payment_provider_garanti"/>
+        <field name="card_network">mastercard</field>
+        <field name="installment_count">3</field>
+        <field name="interest_rate">1.5</field>
+        <field name="is_active">True</field>
+    </record>
+    <record id="installment_garanti_mc_6" model="sanal.pos.installment">
+        <field name="provider_id" ref="payment_provider_garanti"/>
+        <field name="card_network">mastercard</field>
+        <field name="installment_count">6</field>
+        <field name="interest_rate">3.5</field>
+        <field name="is_active">True</field>
+    </record>
+    <record id="installment_garanti_mc_9" model="sanal.pos.installment">
+        <field name="provider_id" ref="payment_provider_garanti"/>
+        <field name="card_network">mastercard</field>
+        <field name="installment_count">9</field>
+        <field name="interest_rate">5.5</field>
+        <field name="is_active">True</field>
+    </record>
+    <record id="installment_garanti_mc_12" model="sanal.pos.installment">
+        <field name="provider_id" ref="payment_provider_garanti"/>
+        <field name="card_network">mastercard</field>
+        <field name="installment_count">12</field>
+        <field name="interest_rate">8.0</field>
+        <field name="is_active">True</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- İptal Wizard Form View -->
+    <record id="sanal_pos_cancel_wizard_form" model="ir.ui.view">
+        <field name="name">sanal.pos.cancel.wizard.form</field>
+        <field name="model">sanal.pos.cancel.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="transaction_id"/>
+                        <field name="amount"/>
+                    </group>
+                </group>
+                <group>
+                    <field name="reason" placeholder="İptal nedenini yazın..."/>
+                </group>
+                <footer>
+                    <button name="action_cancel" type="object"
+                            string="İptal Et" class="btn-danger"/>
+                    <button string="Vazgeç" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- İptal Wizard Action -->
+    <record id="action_sanal_pos_cancel_wizard" model="ir.actions.act_window">
+        <field name="name">Sanal POS İptal</field>
+        <field name="res_model">sanal.pos.cancel.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+</odoo>

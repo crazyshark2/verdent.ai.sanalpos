@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <!-- Ürün Sayfası Taksit Tablosu Widget -->
+    <t t-name="payment_sanal_pos.InstallmentWidget">
+        <div class="sanal-pos-installment-widget card mt-3">
+            <div class="card-header">
+                <h5 class="mb-0">
+                    <i class="fa fa-credit-card me-2"/>Taksit Seçenekleri
+                </h5>
+            </div>
+            <div class="card-body">
+                <!-- Loading -->
+                <div t-if="state.loading" class="text-center py-3">
+                    <i class="fa fa-spinner fa-spin fa-2x"/>
+                    <p class="mt-2 text-muted">Taksit bilgileri yükleniyor...</p>
+                </div>
+
+                <!-- Hata -->
+                <div t-if="state.error" class="alert alert-warning">
+                    <t t-esc="state.error"/>
+                </div>
+
+                <!-- Taksit yok -->
+                <div t-if="!state.loading and state.banks.length === 0 and !state.error"
+                     class="text-center text-muted py-3">
+                    <p>Taksit seçenekleri mevcut değil.</p>
+                </div>
+
+                <!-- Banka Seçimi -->
+                <div t-if="!state.loading and state.banks.length > 0">
+                    <div class="d-flex flex-wrap gap-2 mb-3">
+                        <t t-foreach="state.banks" t-as="bank" t-key="bank.code">
+                            <button class="btn btn-sm"
+                                    t-att-class="{'btn-primary': state.selectedBank === bank.code, 'btn-outline-secondary': state.selectedBank !== bank.code}"
+                                    t-on-click="() => this.selectBank(bank.code)">
+                                <t t-esc="bank.name"/>
+                            </button>
+                        </t>
+                    </div>
+
+                    <!-- Taksit Tablosu -->
+                    <table t-if="selectedBankData" class="table table-sm table-striped">
+                        <thead>
+                            <tr>
+                                <th>Taksit</th>
+                                <th>Aylık</th>
+                                <th>Toplam</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="selectedBankData.installments" t-as="inst" t-key="inst.count">
+                                <tr>
+                                    <td>
+                                        <t t-if="inst.count === 1">Tek Çekim</t>
+                                        <t t-else="">
+                                            <t t-esc="inst.count"/> Taksit
+                                            <span t-if="inst.rate > 0" class="text-muted small">
+                                                (+%<t t-esc="inst.rate.toFixed(1)"/>)
+                                            </span>
+                                        </t>
+                                    </td>
+                                    <td><t t-esc="formatCurrency(inst.monthly)"/></td>
+                                    <td><t t-esc="formatCurrency(inst.total)"/></td>
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </t>
+
+</templates>

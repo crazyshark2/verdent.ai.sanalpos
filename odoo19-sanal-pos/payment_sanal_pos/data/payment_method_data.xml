@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <!-- Sanal POS Ödeme Yöntemi -->
+    <record id="payment_method_sanal_pos_card" model="payment.method">
+        <field name="name">Kredi/Banka Kartı</field>
+        <field name="code">card</field>
+        <field name="primary_payment_method_id" ref="payment.payment_method_card"/>
+        <field name="active">True</field>
+    </record>
+
+</odoo>

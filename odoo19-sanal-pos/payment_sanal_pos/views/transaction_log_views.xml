@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Transaction Log Tree View -->
+    <record id="sanal_pos_transaction_log_tree" model="ir.ui.view">
+        <field name="name">sanal.pos.transaction.log.tree</field>
+        <field name="model">sanal.pos.transaction.log</field>
+        <field name="arch" type="xml">
+            <tree decoration-danger="not is_success" decoration-success="is_success"
+                  default_order="create_date desc">
+                <field name="create_date"/>
+                <field name="transaction_id"/>
+                <field name="provider_id"/>
+                <field name="log_type"/>
+                <field name="direction"/>
+                <field name="url" optional="hide"/>
+                <field name="http_status"/>
+                <field name="duration_ms"/>
+                <field name="is_success"/>
+                <field name="error_message" optional="show"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Transaction Log Form View -->
+    <record id="sanal_pos_transaction_log_form" model="ir.ui.view">
+        <field name="name">sanal.pos.transaction.log.form</field>
+        <field name="model">sanal.pos.transaction.log</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="create_date"/>
+                            <field name="transaction_id"/>
+                            <field name="provider_id"/>
+                            <field name="log_type"/>
+                            <field name="direction"/>
+                        </group>
+                        <group>
+                            <field name="url"/>
+                            <field name="http_status"/>
+                            <field name="duration_ms"/>
+                            <field name="is_success"/>
+                            <field name="ip_address"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="İstek Verisi">
+                            <field name="request_data" widget="text"/>
+                        </page>
+                        <page string="Yanıt Verisi">
+                            <field name="response_data" widget="text"/>
+                        </page>
+                        <page string="Hata" invisible="not error_message">
+                            <field name="error_message" widget="text"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Transaction Log Search View -->
+    <record id="sanal_pos_transaction_log_search" model="ir.ui.view">
+        <field name="name">sanal.pos.transaction.log.search</field>
+        <field name="model">sanal.pos.transaction.log</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="transaction_id"/>
+                <field name="provider_id"/>
+                <field name="log_type"/>
+                <filter name="errors" string="Hatalar" domain="[('is_success','=',False)]"/>
+                <filter name="success" string="Başarılı" domain="[('is_success','=',True)]"/>
+                <separator/>
+                <filter name="today" string="Bugün"
+                        domain="[('create_date','&gt;=', (context_today()).strftime('%%Y-%%m-%%d'))]"/>
+                <group expand="0" string="Grupla">
+                    <filter name="group_type" string="Log Tipi"
+                            context="{'group_by':'log_type'}"/>
+                    <filter name="group_provider" string="Provider"
+                            context="{'group_by':'provider_id'}"/>
+                    <filter name="group_day" string="Gün"
+                            context="{'group_by':'create_date:day'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Transaction Log Action -->
+    <record id="action_sanal_pos_transaction_log" model="ir.actions.act_window">
+        <field name="name">İşlem Logları</field>
+        <field name="res_model">sanal.pos.transaction.log</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'search_default_today': 1}</field>
+    </record>
+
+</odoo>

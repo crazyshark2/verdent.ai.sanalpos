@@ -1,0 +1,12 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_sanal_pos_bin_public,sanal.pos.bin.public,model_sanal_pos_bin,base.group_public,1,0,0,0
+access_sanal_pos_bin_user,sanal.pos.bin.user,model_sanal_pos_bin,base.group_user,1,0,0,0
+access_sanal_pos_bin_admin,sanal.pos.bin.admin,model_sanal_pos_bin,account.group_account_manager,1,1,1,1
+access_sanal_pos_installment_public,sanal.pos.installment.public,model_sanal_pos_installment,base.group_public,1,0,0,0
+access_sanal_pos_installment_user,sanal.pos.installment.user,model_sanal_pos_installment,base.group_user,1,0,0,0
+access_sanal_pos_installment_admin,sanal.pos.installment.admin,model_sanal_pos_installment,account.group_account_manager,1,1,1,1
+access_sanal_pos_category_rate_public,sanal.pos.category.rate.public,model_sanal_pos_category_rate,base.group_public,1,0,0,0
+access_sanal_pos_category_rate_user,sanal.pos.category.rate.user,model_sanal_pos_category_rate,base.group_user,1,0,0,0
+access_sanal_pos_category_rate_admin,sanal.pos.category.rate.admin,model_sanal_pos_category_rate,account.group_account_manager,1,1,1,1
+access_sanal_pos_transaction_log_user,sanal.pos.transaction.log.user,model_sanal_pos_transaction_log,base.group_user,1,0,0,0
+access_sanal_pos_transaction_log_admin,sanal.pos.transaction.log.admin,model_sanal_pos_transaction_log,account.group_account_manager,1,1,1,1

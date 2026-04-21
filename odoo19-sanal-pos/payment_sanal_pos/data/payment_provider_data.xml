@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <!-- Garanti BBVA Provider -->
+    <record id="payment_provider_garanti" model="payment.provider">
+        <field name="name">Garanti BBVA</field>
+        <field name="code">sanal_pos_garanti</field>
+        <field name="state">disabled</field>
+        <field name="is_published">False</field>
+        <field name="sanal_pos_gateway_type">garanti</field>
+        <field name="sanal_pos_bank_name">garanti</field>
+        <field name="sanal_pos_api_url">https://sanalposprov.garantibbva.com.tr/VPServlet</field>
+        <field name="sanal_pos_api_url_test">https://sanalposprovtest.garantibbva.com.tr/VPServlet</field>
+        <field name="sanal_pos_3d_gate_url">https://sanalposprov.garantibbva.com.tr/servlet/gt3dengine</field>
+        <field name="sanal_pos_3d_gate_url_test">https://sanalposprovtest.garantibbva.com.tr/servlet/gt3dengine</field>
+        <field name="sanal_pos_payment_model">3d_secure</field>
+    </record>
+
+    <!-- Akbank Provider (EstV3) -->
+    <record id="payment_provider_akbank" model="payment.provider">
+        <field name="name">Akbank</field>
+        <field name="code">sanal_pos_estv3</field>
+        <field name="state">disabled</field>
+        <field name="is_published">False</field>
+        <field name="sanal_pos_gateway_type">estv3</field>
+        <field name="sanal_pos_bank_name">akbank</field>
+        <field name="sanal_pos_api_url">https://www.sanalakpos.com/fim/api</field>
+        <field name="sanal_pos_api_url_test">https://entegrasyon.asseco-see.com.tr/fim/api</field>
+        <field name="sanal_pos_3d_gate_url">https://www.sanalakpos.com/fim/est3Dgate</field>
+        <field name="sanal_pos_3d_gate_url_test">https://entegrasyon.asseco-see.com.tr/fim/est3Dgate</field>
+        <field name="sanal_pos_payment_model">3d_secure</field>
+    </record>
+
+    <!-- İşbank Provider (EstV3) -->
+    <record id="payment_provider_isbank" model="payment.provider">
+        <field name="name">Türkiye İş Bankası</field>
+        <field name="code">sanal_pos_estv3</field>
+        <field name="state">disabled</field>
+        <field name="is_published">False</field>
+        <field name="sanal_pos_gateway_type">estv3</field>
+        <field name="sanal_pos_bank_name">isbank</field>
+        <field name="sanal_pos_api_url">https://sanalpos.isbank.com.tr/fim/api</field>
+        <field name="sanal_pos_api_url_test">https://entegrasyon.asseco-see.com.tr/fim/api</field>
+        <field name="sanal_pos_3d_gate_url">https://sanalpos.isbank.com.tr/fim/est3Dgate</field>
+        <field name="sanal_pos_3d_gate_url_test">https://entegrasyon.asseco-see.com.tr/fim/est3Dgate</field>
+        <field name="sanal_pos_payment_model">3d_secure</field>
+    </record>
+
+    <!-- Ziraat Bankası Provider (EstV3) -->
+    <record id="payment_provider_ziraat" model="payment.provider">
+        <field name="name">Ziraat Bankası</field>
+        <field name="code">sanal_pos_estv3</field>
+        <field name="state">disabled</field>
+        <field name="is_published">False</field>
+        <field name="sanal_pos_gateway_type">estv3</field>
+        <field name="sanal_pos_bank_name">ziraat</field>
+        <field name="sanal_pos_api_url">https://sanalpos2.ziraatbank.com.tr/fim/api</field>
+        <field name="sanal_pos_api_url_test">https://entegrasyon.asseco-see.com.tr/fim/api</field>
+        <field name="sanal_pos_3d_gate_url">https://sanalpos2.ziraatbank.com.tr/fim/est3Dgate</field>
+        <field name="sanal_pos_3d_gate_url_test">https://entegrasyon.asseco-see.com.tr/fim/est3Dgate</field>
+        <field name="sanal_pos_payment_model">3d_secure</field>
+    </record>
+
+    <!-- Vakıfbank Provider (PayFlex) -->
+    <record id="payment_provider_vakifbank" model="payment.provider">
+        <field name="name">Vakıfbank</field>
+        <field name="code">sanal_pos_payflex</field>
+        <field name="state">disabled</field>
+        <field name="is_published">False</field>
+        <field name="sanal_pos_gateway_type">payflex</field>
+        <field name="sanal_pos_bank_name">vakifbank</field>
+        <field name="sanal_pos_api_url">https://onlineodeme.vakifbank.com.tr/VirtualPOS/v3/ALLPayment</field>
+        <field name="sanal_pos_api_url_test">https://onlineodemetest.vakifbank.com.tr/VirtualPOS/v3/ALLPayment</field>
+        <field name="sanal_pos_3d_gate_url">https://3dsecure.vakifbank.com.tr/MPIAPI/MPI_Enrollment.aspx</field>
+        <field name="sanal_pos_3d_gate_url_test">https://3dsecuretest.vakifbank.com.tr/MPIAPI/MPI_Enrollment.aspx</field>
+        <field name="sanal_pos_payment_model">3d_secure</field>
+    </record>
+
+    <!-- Yapı Kredi Provider (PosNet) -->
+    <record id="payment_provider_yapikredi" model="payment.provider">
+        <field name="name">Yapı Kredi</field>
+        <field name="code">sanal_pos_posnet</field>
+        <field name="state">disabled</field>
+        <field name="is_published">False</field>
+        <field name="sanal_pos_gateway_type">posnet</field>
+        <field name="sanal_pos_bank_name">yapikredi</field>
+        <field name="sanal_pos_api_url">https://posnet.yapikredi.com.tr/PosnetWebService/XML</field>
+        <field name="sanal_pos_api_url_test">https://setmpos.ykb.com/PosnetWebService/XML</field>
+        <field name="sanal_pos_3d_gate_url">https://posnet.yapikredi.com.tr/3DSWebService/YKBPaymentService</field>
+        <field name="sanal_pos_3d_gate_url_test">https://setmpos.ykb.com/3DSWebService/YKBPaymentService</field>
+        <field name="sanal_pos_payment_model">3d_secure</field>
+    </record>
+
+</odoo>

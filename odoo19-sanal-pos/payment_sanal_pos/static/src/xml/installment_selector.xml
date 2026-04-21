@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <!-- Taksit Seçici (Ödeme Sayfası İçin) -->
+    <t t-name="payment_sanal_pos.InstallmentSelector">
+        <div class="sanal-pos-installment-selector">
+            <!-- Loading -->
+            <div t-if="state.loading" class="text-center py-2">
+                <i class="fa fa-spinner fa-spin"/>
+                <small class="text-muted ms-1">Taksit seçenekleri yükleniyor...</small>
+            </div>
+
+            <!-- Banka Bilgisi -->
+            <div t-if="state.bankInfo" class="mb-2">
+                <small class="text-success">
+                    <i class="fa fa-check-circle me-1"/>
+                    <t t-esc="state.bankInfo.bank_name"/>
+                </small>
+            </div>
+
+            <!-- Hata -->
+            <div t-if="state.error" class="text-danger small">
+                <t t-esc="state.error"/>
+            </div>
+
+            <!-- Taksit Seçenekleri -->
+            <div t-if="!state.loading and state.installments.length > 0"
+                 class="installment-options">
+                <t t-foreach="state.installments" t-as="inst" t-key="inst.count">
+                    <div class="form-check installment-option"
+                         t-att-class="{'selected': state.selectedInstallment === inst.count}"
+                         t-on-click="() => this.selectInstallment(inst.count)">
+                        <input type="radio" class="form-check-input"
+                               t-att-checked="state.selectedInstallment === inst.count"
+                               t-att-name="'installment_' + props.amount"/>
+                        <label class="form-check-label d-flex justify-content-between w-100">
+                            <span>
+                                <t t-if="inst.count === 1">Tek Çekim</t>
+                                <t t-else="">
+                                    <t t-esc="inst.count"/> Taksit
+                                </t>
+                            </span>
+                            <span class="fw-bold">
+                                <t t-esc="formatCurrency(inst.monthly)"/>
+                                <t t-if="inst.count > 1">/ay</t>
+                            </span>
+                        </label>
+                    </div>
+                </t>
+            </div>
+        </div>
+    </t>
+
+</templates>

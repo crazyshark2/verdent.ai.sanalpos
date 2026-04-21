@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <!-- Ödeme Sayfası Kart Formu -->
+    <t t-name="payment_sanal_pos.PaymentForm">
+        <div class="sanal-pos-payment-form">
+
+            <!-- Hata Mesajı -->
+            <div t-if="state.error" class="alert alert-danger mb-3">
+                <i class="fa fa-exclamation-triangle me-1"/>
+                <t t-esc="state.error"/>
+            </div>
+
+            <!-- Kart Bilgileri -->
+            <div class="row g-3 mb-3">
+                <!-- Kart Numarası -->
+                <div class="col-12">
+                    <label class="form-label fw-bold">Kart Numarası</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control"
+                               placeholder="0000 0000 0000 0000"
+                               maxlength="19"
+                               t-att-value="state.cardNumber"
+                               t-on-input="onCardNumberInput"
+                               autocomplete="cc-number"/>
+                        <span class="input-group-text">
+                            <i t-att-class="state.cardNetworkIcon"/>
+                        </span>
+                    </div>
+                    <!-- Banka Bilgisi -->
+                    <div t-if="state.bankInfo" class="mt-1">
+                        <small class="text-success">
+                            <i class="fa fa-check-circle me-1"/>
+                            <t t-esc="state.bankInfo.bank_name"/>
+                        </small>
+                    </div>
+                </div>
+
+                <!-- Kart Sahibi -->
+                <div class="col-12">
+                    <label class="form-label">Kart Sahibi</label>
+                    <input type="text" class="form-control"
+                           placeholder="AD SOYAD"
+                           t-model="state.cardHolder"
+                           autocomplete="cc-name"/>
+                </div>
+
+                <!-- Son Kullanma Tarihi -->
+                <div class="col-4">
+                    <label class="form-label">Ay</label>
+                    <select class="form-select" t-model="state.expMonth"
+                            autocomplete="cc-exp-month">
+                        <option value="">Ay</option>
+                        <option value="01">01</option>
+                        <option value="02">02</option>
+                        <option value="03">03</option>
+                        <option value="04">04</option>
+                        <option value="05">05</option>
+                        <option value="06">06</option>
+                        <option value="07">07</option>
+                        <option value="08">08</option>
+                        <option value="09">09</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                    </select>
+                </div>
+                <div class="col-4">
+                    <label class="form-label">Yıl</label>
+                    <select class="form-select" t-model="state.expYear"
+                            autocomplete="cc-exp-year">
+                        <option value="">Yıl</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                        <option value="2029">2029</option>
+                        <option value="2030">2030</option>
+                        <option value="2031">2031</option>
+                        <option value="2032">2032</option>
+                        <option value="2033">2033</option>
+                        <option value="2034">2034</option>
+                        <option value="2035">2035</option>
+                    </select>
+                </div>
+                <div class="col-4">
+                    <label class="form-label">CVV</label>
+                    <input type="password" class="form-control"
+                           placeholder="***" maxlength="4"
+                           t-model="state.cvv"
+                           autocomplete="cc-csc"/>
+                </div>
+            </div>
+
+            <!-- Taksit Seçimi -->
+            <div t-if="state.installments.length > 1" class="mb-3">
+                <label class="form-label fw-bold">Taksit Seçenekleri</label>
+                <div class="list-group">
+                    <t t-foreach="state.installments" t-as="inst" t-key="inst.count">
+                        <button type="button"
+                                class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
+                                t-att-class="{'active': state.selectedInstallment === inst.count}"
+                                t-on-click="() => this.selectInstallment(inst.count)">
+                            <div>
+                                <t t-if="inst.count === 1">
+                                    <strong>Tek Çekim</strong>
+                                </t>
+                                <t t-else="">
+                                    <strong><t t-esc="inst.count"/> Taksit</strong>
+                                    <span t-if="inst.rate > 0" class="text-muted ms-2">
+                                        (+%<t t-esc="inst.rate.toFixed(1)"/>)
+                                    </span>
+                                </t>
+                            </div>
+                            <div class="text-end">
+                                <div><t t-esc="formatCurrency(inst.monthly)"/>/ay</div>
+                                <small class="text-muted">
+                                    Toplam: <t t-esc="formatCurrency(inst.total)"/>
+                                </small>
+                            </div>
+                        </button>
+                    </t>
+                </div>
+            </div>
+
+            <!-- Ödeme Butonu -->
+            <button class="btn btn-primary btn-lg w-100"
+                    t-on-click="onSubmit"
+                    t-att-disabled="state.loading">
+                <t t-if="state.loading">
+                    <i class="fa fa-spinner fa-spin me-2"/>İşleniyor...
+                </t>
+                <t t-else="">
+                    <i class="fa fa-lock me-2"/>Güvenli Ödeme Yap
+                </t>
+            </button>
+
+        </div>
+    </t>
+
+</templates>

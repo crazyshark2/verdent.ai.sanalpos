@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Payment Provider Form - Sanal POS Alanları -->
+    <record id="payment_provider_form_sanal_pos" model="ir.ui.view">
+        <field name="name">payment.provider.form.sanal.pos</field>
+        <field name="model">payment.provider</field>
+        <field name="inherit_id" ref="payment.payment_provider_form"/>
+        <field name="arch" type="xml">
+
+            <!-- Credentials Tab -->
+            <xpath expr="//page[@name='credentials']" position="inside">
+                <group name="sanal_pos_credentials"
+                       invisible="code not in ('sanal_pos_garanti', 'sanal_pos_estv3', 'sanal_pos_payflex', 'sanal_pos_posnet')">
+
+                    <group string="Banka Bilgileri">
+                        <field name="sanal_pos_bank_name"/>
+                        <field name="sanal_pos_gateway_type" readonly="1"/>
+                    </group>
+
+                    <group string="Kimlik Bilgileri">
+                        <field name="sanal_pos_merchant_id" password="True"/>
+                        <field name="sanal_pos_terminal_id"/>
+                        <field name="sanal_pos_store_key" password="True"/>
+                        <field name="sanal_pos_provision_user"/>
+                        <field name="sanal_pos_provision_password" password="True"/>
+                    </group>
+
+                    <group string="İade Kimlik Bilgileri" name="refund_credentials">
+                        <field name="sanal_pos_refund_user"/>
+                        <field name="sanal_pos_refund_password" password="True"/>
+                    </group>
+
+                    <group string="API URL'leri">
+                        <field name="sanal_pos_api_url"
+                               placeholder="https://sanalposprov.garantibbva.com.tr/VPServlet"/>
+                        <field name="sanal_pos_api_url_test"
+                               placeholder="https://sanalposprovtest.garantibbva.com.tr/VPServlet"/>
+                        <field name="sanal_pos_3d_gate_url"
+                               placeholder="https://sanalposprov.garantibbva.com.tr/servlet/gt3dengine"/>
+                        <field name="sanal_pos_3d_gate_url_test"
+                               placeholder="https://sanalposprovtest.garantibbva.com.tr/servlet/gt3dengine"/>
+                    </group>
+
+                    <group string="Ödeme Ayarları">
+                        <field name="sanal_pos_3d_secure_active"/>
+                        <field name="sanal_pos_payment_model"/>
+                    </group>
+                </group>
+            </xpath>
+
+            <!-- Taksit Ayarları Tab -->
+            <xpath expr="//notebook" position="inside">
+                <page string="Taksit Ayarları" name="installment_config"
+                      invisible="code not in ('sanal_pos_garanti', 'sanal_pos_estv3', 'sanal_pos_payflex', 'sanal_pos_posnet')">
+                    <group>
+                        <group>
+                            <field name="sanal_pos_installment_active"/>
+                            <field name="sanal_pos_max_installment"
+                                   invisible="not sanal_pos_installment_active"/>
+                        </group>
+                        <group>
+                            <field name="sanal_pos_min_installment_amount"
+                                   invisible="not sanal_pos_installment_active"/>
+                        </group>
+                    </group>
+                    <field name="sanal_pos_installment_config_ids"
+                           invisible="not sanal_pos_installment_active">
+                        <tree editable="bottom">
+                            <field name="card_network"/>
+                            <field name="installment_count"/>
+                            <field name="interest_rate"/>
+                            <field name="min_amount"/>
+                            <field name="max_amount"/>
+                            <field name="is_active" widget="boolean_toggle"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+
+        </field>
+    </record>
+
+    <!-- Payment Transaction Form - Sanal POS Ek Alanlar -->
+    <record id="payment_transaction_form_sanal_pos" model="ir.ui.view">
+        <field name="name">payment.transaction.form.sanal.pos</field>
+        <field name="model">payment.transaction</field>
+        <field name="inherit_id" ref="payment.payment_transaction_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet" position="inside">
+                <notebook invisible="provider_code not in ('sanal_pos_garanti', 'sanal_pos_estv3', 'sanal_pos_payflex', 'sanal_pos_posnet')">
+                    <page string="Sanal POS Bilgileri">
+                        <group>
+                            <group string="Banka Yanıtı">
+                                <field name="sanal_pos_order_id"/>
+                                <field name="sanal_pos_auth_code"/>
+                                <field name="sanal_pos_rrn"/>
+                                <field name="sanal_pos_transaction_id"/>
+                                <field name="sanal_pos_host_ref_num"/>
+                            </group>
+                            <group string="3D Secure">
+                                <field name="sanal_pos_3d_status"/>
+                                <field name="sanal_pos_md_status"/>
+                                <field name="sanal_pos_eci"/>
+                                <field name="sanal_pos_cavv"/>
+                                <field name="sanal_pos_xid"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group string="Taksit Bilgileri">
+                                <field name="sanal_pos_installment_count"/>
+                                <field name="sanal_pos_installment_amount"/>
+                                <field name="sanal_pos_total_with_interest"/>
+                                <field name="sanal_pos_interest_rate"/>
+                            </group>
+                            <group string="Kart Bilgileri">
+                                <field name="sanal_pos_card_type"/>
+                                <field name="sanal_pos_masked_pan"/>
+                                <field name="sanal_pos_card_bank"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group string="İade/İptal">
+                                <field name="sanal_pos_refund_amount"/>
+                                <field name="sanal_pos_refund_date"/>
+                                <field name="sanal_pos_cancel_date"/>
+                                <field name="sanal_pos_original_tx_id"/>
+                            </group>
+                            <group string="Hata Bilgileri">
+                                <field name="sanal_pos_error_code"/>
+                                <field name="sanal_pos_error_message"/>
+                            </group>
+                        </group>
+                    </page>
+                    <page string="Ham Veri (Debug)">
+                        <group>
+                            <field name="sanal_pos_raw_request" widget="text"/>
+                            <field name="sanal_pos_raw_response" widget="text"/>
+                        </group>
+                    </page>
+                </notebook>
+
+                <!-- İade ve İptal Butonları -->
+                <div class="oe_button_box" name="sanal_pos_buttons"
+                     invisible="provider_code not in ('sanal_pos_garanti', 'sanal_pos_estv3', 'sanal_pos_payflex', 'sanal_pos_posnet')">
+                    <button name="action_sanal_pos_refund" type="object"
+                            string="İade" class="oe_stat_button"
+                            icon="fa-undo"
+                            invisible="state != 'done'"/>
+                    <button name="action_sanal_pos_cancel" type="object"
+                            string="İptal" class="oe_stat_button"
+                            icon="fa-times"
+                            invisible="state != 'done'"/>
+                    <button name="action_sanal_pos_query_status" type="object"
+                            string="Durum Sorgula" class="oe_stat_button"
+                            icon="fa-search"/>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

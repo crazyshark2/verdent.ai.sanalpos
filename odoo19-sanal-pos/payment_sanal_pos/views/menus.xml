@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Sanal POS Ana Menü -->
+    <menuitem
+        id="menu_sanal_pos_root"
+        name="Sanal POS"
+        parent="account.menu_finance_configuration"
+        sequence="100"/>
+
+    <menuitem
+        id="menu_sanal_pos_installment"
+        name="Taksit Yönetimi"
+        parent="menu_sanal_pos_root"
+        sequence="10"/>
+
+    <menuitem
+        id="menu_sanal_pos_bin"
+        name="BIN Veritabanı"
+        parent="menu_sanal_pos_root"
+        sequence="20"/>
+
+    <menuitem
+        id="menu_sanal_pos_logs"
+        name="İşlem Logları"
+        parent="menu_sanal_pos_root"
+        sequence="30"/>
+
+    <!-- Taksit Yönetimi -->
+    <menuitem
+        id="menu_installment_list"
+        name="Taksit Tanımları"
+        parent="menu_sanal_pos_installment"
+        action="action_sanal_pos_installment"
+        sequence="10"/>
+
+    <menuitem
+        id="menu_category_rate_list"
+        name="Kategori Bazlı Oranlar"
+        parent="menu_sanal_pos_installment"
+        action="action_sanal_pos_category_rate"
+        sequence="20"/>
+
+    <!-- BIN Veritabanı -->
+    <menuitem
+        id="menu_bin_list"
+        name="BIN Listesi"
+        parent="menu_sanal_pos_bin"
+        action="action_sanal_pos_bin"
+        sequence="10"/>
+
+    <!-- İşlem Logları -->
+    <menuitem
+        id="menu_transaction_log_list"
+        name="Tüm Loglar"
+        parent="menu_sanal_pos_logs"
+        action="action_sanal_pos_transaction_log"
+        sequence="10"/>
+
+</odoo>

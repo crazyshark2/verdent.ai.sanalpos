@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- İade Wizard Form View -->
+    <record id="sanal_pos_refund_wizard_form" model="ir.ui.view">
+        <field name="name">sanal.pos.refund.wizard.form</field>
+        <field name="model">sanal.pos.refund.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <field name="transaction_id"/>
+                        <field name="original_amount"/>
+                        <field name="already_refunded"/>
+                        <field name="max_refund_amount"/>
+                    </group>
+                    <group>
+                        <field name="refund_type"/>
+                        <field name="refund_amount"
+                               invisible="refund_type == 'full'"/>
+                    </group>
+                </group>
+                <group>
+                    <field name="reason" placeholder="İade nedenini yazın..."/>
+                </group>
+                <footer>
+                    <button name="action_refund" type="object"
+                            string="İade Yap" class="btn-primary"/>
+                    <button string="İptal" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- İade Wizard Action -->
+    <record id="action_sanal_pos_refund_wizard" model="ir.actions.act_window">
+        <field name="name">Sanal POS İade</field>
+        <field name="res_model">sanal.pos.refund.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+</odoo>
